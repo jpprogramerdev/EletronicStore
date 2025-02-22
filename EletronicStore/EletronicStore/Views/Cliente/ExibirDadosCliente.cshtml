@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Exibir Dados Clientes";
+
+    <link rel="stylesheet" href="~/css/DadosCliente.css" asp-append-version="true" />
+}
+
+<p class="nome-cliente">João Pedro Gerotto Fernandes</p>
+<p class="contato-cliente">Email: joao@gmail.com | Telefone: (11) 90011-0011 | CPF: 12345678900</p>
+<p class="genero-cliente">Genero: Masculino</p>
+
+
+<div class="painel-cards">
+    <h3 class="card-title">Cartões</h3>
+    <div class="group-cards">
+        <div class="card-item">
+            <div class="card-body">
+                <p class="card-text">Apelido: Cartão pai</p>
+                <p class="card-text">Numero: 12344321567887654</p>
+                <p class="card-text">CVV: 123</p>
+                <p class="card-text">Data de validade: 12/32</p>
+                <p class="card-text">Bandeira: MasterCard</p>
+                <p class="card-text">Função: Crédito</p>
+            </div>
+            <a class="btn btn-primary" asp-action="EditarCartao" asp-controller="Cartao">Editar</a>
+            <a class="btn btn-danger">Excluir</a>
+        </div>
+        <div class="card-item"> 
+            <div class="card-body">
+                <p class="card-text">Apelido: Cartão Nubank Credito</p>
+                <p class="card-text">Numero: 12344321567887654</p>
+                <p class="card-text">CVV: 123</p>
+                <p class="card-text">Data de validade: 12/32</p>
+                <p class="card-text">Bandeira: MasterCard</p>
+                <p class="card-text">Função: Débito</p>
+            </div>
+            <a class="btn btn-primary" asp-action="EditarCartao" asp-controller="Cartao">Editar</a>
+            <a class="btn btn-danger">Excluir</a>
+        </div>
+    </div>
+    <a asp-action="CadastrarCartao" asp-controller="Cartao" class="btn btn-info">Adicionar Cartão</a>
+</div>
+
+
+<div class="painel-cards">
+    <h3 class="card-title">Endereços</h3>
+    <div class="group-cards">
+        <div class="card-item">
+            <div class="card-body">
+                <p class="card-text">Apelido: Endereço Tia</p>
+                <p class="card-text">CEP: 08820200</p>
+                <p class="card-text">Tipo Logradouro: Rua</p>
+                <p class="card-text">Logradouro: Tal da Silva XAB</p>
+                <p class="card-text">Numero: 40</p>
+                <p class="card-text">Bairro: Jardim Silva</p>
+                <p class="card-text">Pais: Brasil</p>
+                <p class="card-text">Estado: São Paulo1</p>
+                <p class="card-text">Pais: Adamantina</p>
+            </div>
+            <a class="btn btn-primary" asp-controller="Endereco" asp-action="EditarEndereco">Editar</a>
+            <a class="btn btn-danger">Excluir</a>
+        </div>
+        <div class="card-item">
+            <div class="card-body">
+                <p class="card-text">Apelido: Minha Casa</p>
+                <p class="card-text">CEP: 08900000</p>
+                <p class="card-text">Tipo Logradouro: Av</p>
+                <p class="card-text">Logradouro: ABCXYZ </p>
+                <p class="card-text">Numero: 20</p>
+                <p class="card-text">Bairro: Jardim Condominio</p>
+                <p class="card-text">Pais: Brasil</p>
+                <p class="card-text">Estado: São Paulo1</p>
+                <p class="card-text">Pais: Adamantina</p>
+                <p class="card-text">Observação: Apartamento 20, Bloco C</p>
+            </div>
+            <a class="btn btn-primary" asp-controller="Endereco" asp-action="EditarEndereco">Editar</a>
+            <a class="btn btn-danger">Excluir</a>
+        </div>
+    </div>
+    <a asp-action="CadastrarEndereco" asp-controller="Endereco" class="btn btn-info">Adicionar Endereço</a>
+</div>

@@ -1,0 +1,25 @@
+﻿.table-cliente tr {
+    padding: 5rem;
+}
+
+.table-cliente tr.cliente-desativado {
+    color: #d52020;
+    font-weight: 800;
+}
+
+.table-cliente tr.cliente-ativo {
+    color: #2dca00;
+    font-weight: 800;
+}
+
+.table-cliente tr a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    transition: .5s;
+}
+
+.table-cliente tr a:hover {
+    filter: brightness(1.5);
+    transition: .5s;
+}

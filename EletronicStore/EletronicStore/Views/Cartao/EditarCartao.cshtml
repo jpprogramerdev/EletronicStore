@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Editar Cartão";
+}
+
+<form>
+    <div class="form-group">
+        <label for="apelido-cartao-cliente">Apelido Cartão:</label>
+        <input type="text" class="form-control" id="apelido-cartao-cliente" placeholder="Apelido">
+    </div>
+    <div class="form-group">
+        <label for="cep-endereco-cliente">Numero:</label>
+        <input type="text" class="form-control" id="numero-cartao-cliente" placeholder="Numero">
+    </div>
+    <div class="form-group">
+        <label for="tipoLogradouro-endereco-cliente">Bandeira :</label>
+        <select class="form-control" id="bandeira-cartao-cliente">
+            <option value="">MasterCard</option>
+            <option value="">Viza</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="logradouro-endereco-cliente">Data validade:</label>
+        <input type="text" class="form-control" id="dtValidade-cartao-cliente" placeholder="MM/AA">
+    </div>
+    <div class="form-group">
+        <label for="numero-endereco-cliente">CVV:</label>
+        <input type="text" class="form-control" id="cvv-cartao-cliente" placeholder="Numero">
+    </div>
+    <div class="form-group">
+        <label for="funcao-cartao-cliente">Função:</label>
+        <select class="form-control" id="funcao-cartao-cliente">
+            <option value="">Débito</option>
+            <option value="">Crédito</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Editar</button>
+</form>

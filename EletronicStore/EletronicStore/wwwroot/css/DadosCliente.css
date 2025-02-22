@@ -1,0 +1,44 @@
+﻿p.nome-cliente {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+p.contato-cliente{
+    color: #969696;
+}
+
+.painel-cards {
+    width: 100%;
+    margin-top: 2vh;
+    box-shadow: -4px 6px 50px -60px rgba(0, 0, 0, 0.75);
+    border: solid 1px #bebebe;
+    border-radius: 10px;
+    padding: 2vh;
+}
+
+.group-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    justify-content: center;
+    gap: 3vh;
+    width: 100%;
+}
+
+.card-item {
+    border: solid 1px #bebebe;
+    border-radius: 10px;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p.genero-cliente {
+    color: #969696;
+    font-size: 0.9rem;
+}

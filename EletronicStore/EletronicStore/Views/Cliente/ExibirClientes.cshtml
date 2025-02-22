@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Exibir Clientes";
+
+    <link rel="stylesheet" href="~/css/TabelaCliente.css" asp-append-version="true" />
+}
+
+<table class="table table-cliente">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Email</th>
+            <th scope="col">Endereços cadastrados</th>
+            <th scope="col">Cartões cadastrados</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="cliente-ativo">
+            <td>João Pedro Gerotto Fernandes</td>
+            <td>joao@gmail.com</td>
+            <td>2</td>
+            <td>2</td>
+            <td>e
+                <a asp-action="ExibirDadosCliente" asp-controller="Cliente"><i class="bi bi-info-circle-fill"></i></a> |
+                <a asp-action="AtualizarCliente" asp-controller="Cliente"><i class="bi bi-pencil-fill"></i></a> | 
+                <a><i class="bi bi-lock-fill"></i></a>
+            </td>
+        </tr>
+        <tr class="cliente-desativado">
+            <td>Caique Alves Nascimento</td>
+            <td>alves_nascimento@hotmail.com</td>
+            <td>1</td>
+            <td>3</td>
+            <td>
+                <a asp-action="ExibirDadosCliente" asp-controller="Cliente"><i class="bi bi-info-circle-fill"></i></a> |
+                <a asp-action="AtualizarCliente" asp-controller="Cliente"><i class="bi bi-pencil-fill"></i></a> |
+                <a><i class="bi bi-unlock-fill"></i></a>
+            </td>
+        </tr>
+    </tbody>
+</table>

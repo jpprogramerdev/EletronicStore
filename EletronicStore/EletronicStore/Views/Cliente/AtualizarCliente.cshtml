@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Editar Dados Cliente";
+}
+
+<form>
+    <div class="form-group">
+        <label for="nome-cliente">Nome completo:</label>
+        <input type="text" class="form-control" id="nome-cliente"placeholder="Nome completo">
+    </div>
+    <div class="form-group">
+        <label for="email-cliente">Email:</label>
+        <input type="email" class="form-control" id="email-cliente" placeholder="exemplo@email.com">
+    </div>
+    <div class="form-group">
+        <label for="cpf-cliente">CPF:</label>
+        <input type="text" class="form-control" id="cpf-cliente" placeholder="CPF">
+    </div>
+    <div class="form-group">
+        <label for="genero-cliente">Genero:</label>
+        <select class="form-control" id="genero-cliente">
+            <option value="">Masculino</option>
+            <option value="">Feminino</option>
+            <option value="">Outro</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="telefone-cliente">Telefone:</label>
+        <input type="text" class="form-control" id="telefone-cliente" placeholder="Telefone">
+    </div>
+
+    <div class="form-group">
+        <label for="pwd-cliente">Senha:</label>
+        <input type="password" class="form-control" id="pwd-cliente">
+    </div>
+
+    <div class="form-group">
+        <label for="pwd-confirm-cliente">Confirmar Senha:</label>
+        <input type="password" class="form-control" id="pwd-confirm-cliente">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+</form>
