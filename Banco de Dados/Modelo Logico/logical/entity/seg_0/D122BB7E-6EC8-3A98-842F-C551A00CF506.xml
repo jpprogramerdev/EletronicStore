@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D122BB7E-6EC8-3A98-842F-C551A00CF506" name="MUNICIPIOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:25:43 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="MUC_ID" id="F555F170-2DAE-90AF-067D-9FEF8E06E7D0">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:25:54 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro do municipio]]></comment>
+<commentInRDBMS><![CDATA[Chave primária que representa o registro do municipio]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MUC_NOME" id="F3453C14-24B5-ABF4-090F-B562B0CE9D6C">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:26:00 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o nome do municipio]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o nome do municipio]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MUC_EST_ID" id="9F4858FC-2109-78CB-100E-4715BE373BD0">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:27:33 UTC</createdTime>
+<comment><![CDATA[Chave estrangeira que identifica o estado do municipio]]></comment>
+<commentInRDBMS><![CDATA[Chave estrangeira que identifica o estado do municipio]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="89ED74E3-17E1-25F0-EF2A-C54AF2C17F33" name="MUNICIPIOS PK">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:26:15 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F555F170-2DAE-90AF-067D-9FEF8E06E7D0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
