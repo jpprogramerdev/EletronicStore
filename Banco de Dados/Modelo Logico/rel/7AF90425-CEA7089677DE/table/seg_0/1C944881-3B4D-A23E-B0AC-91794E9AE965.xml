@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1C944881-3B4D-A23E-B0AC-91794E9AE965" name="USUARIOS_ENDERECOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<ordsAlias>relation_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USEN_USU_ID" id="A937B6C2-589B-6340-965C-6DA32BFC1E0F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4358A75A-4218-A8DB-6E8B-48AD3763A9EB" referredColumn="568E502D-529E-908A-0B66-6360CCDF498B"/>
+</associations>
+</Column>
+<Column name="USEN_END_ID" id="4C269C00-D9B7-7FB7-13CE-023CD6F3170E">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C90FE636-B147-AC1B-4775-372D5F40BAFF" referredColumn="E3DC2354-19AE-6AED-1767-8BD59A9BE24E"/>
+</associations>
+</Column>
+<Column name="USEN_COBRANCA" id="C4F12747-88CB-C85D-66AF-74502F2D595B">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-01 20:06:59 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USEN_ENTREGA" id="99AFC2A6-9965-F74C-6D94-72B1E931ED0F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-01 20:06:59 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2628497F-7410-8DD6-EFD5-DD25DB31C6C4" name="PK_USUARIO_ENDERECO">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A937B6C2-589B-6340-965C-6DA32BFC1E0F"/>
+<colUsage columnID="4C269C00-D9B7-7FB7-13CE-023CD6F3170E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="76B9C650-5243-0E8B-9F06-1F61DE3855D2" name="FK_END_USU">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>F82F8B0D-1C90-1FD9-C1D8-146F28F30F2E</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C269C00-D9B7-7FB7-13CE-023CD6F3170E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="013D5E52-3100-3716-218A-65CB14C4B74C" name="FK_USU_END">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>F82F8B0D-1C90-1FD9-C1D8-146F28F30F2E</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A937B6C2-589B-6340-965C-6DA32BFC1E0F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

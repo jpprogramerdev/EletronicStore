@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8C170900-8612-B4BB-4C18-43E2AB100923" name="CARTOES">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 13:38:00 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CRT ID" id="62B68AD5-9986-EA93-EC63-DB5302BCF629">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 13:38:08 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro dos cartões]]></comment>
+<commentInRDBMS><![CDATA[Chave primaria que representa o registro dos cartões]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRT NUMERO" id="673CDB34-1B91-20ED-42E7-334F63BDBC45">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 13:38:38 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o numero do cartão]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o numero do cartão]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRT CVV" id="5506DF96-D356-D238-39E2-763635FE505E">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 13:39:11 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o CVV/ Código de segurança  do cartão]]></comment>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRT APELIDO" id="039DE955-B215-A4B4-63E3-8798B09968CD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 13:39:41 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o apelido  do cartão]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o apelido  do cartão]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRT_FUNCAO" id="BAE2D0ED-429C-D324-E3FA-7D169A268AB3">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 22:35:45 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRT_BDC_ID" id="0CC61256-4E91-E89C-67E3-C79C2772C44A">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 13:40:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[Chave estrangeira  que faze referencia a bandeira dos cartões]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRT BDC ID" id="C52C0095-2942-5E3B-5449-7AE9E826897A">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 13:41:11 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro das bandeira do cartão]]></comment>
+<generatorID>51A2C656-9D4A-61EA-46C8-94A2BAC76717</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>E3125736-C003-3C77-1981-6BAE120F9169</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRT FUNCAO" id="9C7BBA77-51CA-0EA1-69A8-36E036581DF0">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:20:10 UTC</createdTime>
+<generatorID>3E2B4B94-2FC7-6A86-D3D7-483CB7348D06</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DD2AC9E3-D175-C109-D250-26ADA6BBFDCA" name="PK_CRT">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 13:38:17 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>62B68AD5-9986-EA93-EC63-DB5302BCF629</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

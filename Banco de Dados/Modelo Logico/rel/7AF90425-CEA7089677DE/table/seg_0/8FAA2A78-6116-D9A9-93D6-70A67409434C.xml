@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8FAA2A78-6116-D9A9-93D6-70A67409434C" name="GENEROS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>1A2763CA-5E4B-7A86-0473-D3E3F5BA5CDD</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="GNR_ID" id="64380097-F5FE-E1FB-78A7-60067E8707BB">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro dos generos dos usuarios]]></comment>
+<commentInRDBMS><![CDATA[Chave primária que representa o registro dos generos dos usuarios]]></commentInRDBMS>
+<generatorID>C260F48C-6D81-5205-4F68-3247329CED15</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GNR_GENERO" id="B8A292F8-525B-A6AA-61B6-F3370C47983C">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o os generos para o usuário]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o os generos para o usuário]]></commentInRDBMS>
+<generatorID>FA261FE8-D2B9-127D-C8F0-661F04ADDE2E</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8F1C918F-8E54-6EF7-960A-BCA20E65009B" name="PK_GNR">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>09AFA6CA-76FA-642C-E8C1-ACBA3462A655</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="64380097-F5FE-E1FB-78A7-60067E8707BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

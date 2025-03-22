@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="MUC_ID" id="F555F170-2DAE-90AF-067D-9FEF8E06E7D0">
+<Attribute name="MUC ID" id="F555F170-2DAE-90AF-067D-9FEF8E06E7D0">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-22 12:25:54 UTC</createdTime>
 <comment><![CDATA[Chave primária que representa o registro do municipio]]></comment>
@@ -29,7 +29,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="MUC_NOME" id="F3453C14-24B5-ABF4-090F-B562B0CE9D6C">
+<Attribute name="MUC NOME" id="F3453C14-24B5-ABF4-090F-B562B0CE9D6C">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-22 12:26:00 UTC</createdTime>
 <comment><![CDATA[Coluna que identifica o nome do municipio]]></comment>
@@ -58,14 +58,45 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-</attributes>
-<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="89ED74E3-17E1-25F0-EF2A-C54AF2C17F33" name="MUNICIPIOS PK">
+<Attribute name="MUC EST ID" id="E2362598-078B-8FA2-B16C-AAFDC16D0D8E">
 <createdBy>jp120</createdBy>
-<createdTime>2025-02-22 12:26:15 UTC</createdTime>
+<createdTime>2025-02-22 20:02:23 UTC</createdTime>
+<comment><![CDATA[Chave primaria que indentifica o registro do estado]]></comment>
+<generatorID>95895141-C67A-F7DD-3F8A-CFAFCFDCE220</generatorID>
 <ownerDesignName>Modelo Logico</ownerDesignName>
 <engineerTo>
 <item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>C5A08CE9-4119-7502-BFF7-97DD040C5404</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END ID" id="205833A9-051B-5A47-0447-8E0641427FDE">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:20:10 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro do endereço]]></comment>
+<generatorID>56F059B8-7C61-677D-8A35-5BBE33628412</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>928A4654-8D02-200A-0067-6CA3CD457D01</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="89ED74E3-17E1-25F0-EF2A-C54AF2C17F33" name="PK_MUC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:26:15 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

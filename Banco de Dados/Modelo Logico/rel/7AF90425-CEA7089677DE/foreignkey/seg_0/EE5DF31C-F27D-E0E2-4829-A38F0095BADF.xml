@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="EE5DF31C-F27D-E0E2-4829-A38F0095BADF" containerWithKeyObject="E8D4B276-9C51-F240-4ABB-5D5911CE4049" localFKIndex="DFEA95DC-035E-B44A-E1DB-67E4C95E2BAE" name="FK_PDD_CPN">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>09CAA6EA-CC27-9785-B2EE-47823EDFAA6B</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<referredTableLongName>CUPONS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EC7A8C6E-7099-9A3C-3500-A2E7BF39D99C</referredTableID>
+<keyObject>AF35E454-24DD-CF41-8367-EA628D526D05</keyObject>
+<referredKeyID>AF35E454-24DD-CF41-8367-EA628D526D05</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CPN_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

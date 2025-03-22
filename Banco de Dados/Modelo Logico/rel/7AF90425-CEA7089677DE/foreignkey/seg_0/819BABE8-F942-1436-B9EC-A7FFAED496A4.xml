@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="819BABE8-F942-1436-B9EC-A7FFAED496A4" containerWithKeyObject="CF43FA52-43A8-754D-9871-ECF6E2D79E07" localFKIndex="B687925C-DD59-E433-B125-48526404F3EA" name="FK_PRD_FRD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-21 23:21:40 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<referredTableLongName>FORNECEDORES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>51AD4E7C-605C-5EC8-3E7C-AEA6E741DDAD</referredTableID>
+<keyObject>14746198-F8F9-D5CD-8605-BD990B553C4A</keyObject>
+<referredKeyID>14746198-F8F9-D5CD-8605-BD990B553C4A</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>FRD_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

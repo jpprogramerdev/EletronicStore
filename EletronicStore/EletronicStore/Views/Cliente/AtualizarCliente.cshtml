@@ -1,36 +1,114 @@
-﻿@{
+﻿@model Usuario
+
+@{
     ViewData["Title"] = "Editar Dados Cliente";
+
+    if (TempData["FalhaAtualizarCliente"] != null) {
+        <div class="alert alert-danger" role="alert">
+            @TempData["FalhaAtualizarCliente"]
+        </div>
+    }
+    if (TempData["SucessoAtualizarCliente"] != null) {
+        <div class="alert alert-success" role="alert">
+            @TempData["SucessoAtualizarCliente"]
+        </div>
+    }
 }
 
-<form>
+<form asp-action="AtualizarDadosCliente" asp-controller="Cliente" method="post">
+    <input type="hidden" asp-for="@Model.Id"/>
+
     <div class="form-group">
         <label for="nome-cliente">Nome completo:</label>
-        <input type="text" class="form-control" id="nome-cliente"placeholder="Nome completo">
+        <input type="text" class="form-control" id="nome-cliente" placeholder="Nome completo" asp-for="@Model.Nome">
     </div>
     <div class="form-group">
         <label for="email-cliente">Email:</label>
-        <input type="email" class="form-control" id="email-cliente" placeholder="exemplo@email.com">
+        <input type="email" class="form-control" id="email-cliente" placeholder="exemplo@email.com" asp-for="@Model.Email">
     </div>
     <div class="form-group">
         <label for="cpf-cliente">CPF:</label>
-        <input type="text" class="form-control" id="cpf-cliente" placeholder="CPF">
+        <input type="text" class="form-control" id="cpf-cliente" placeholder="CPF" asp-for="@Model.CPF">
+    </div>
+    <div class="form-group">
+        <label for="cpf-cliente">Data de nascimento:</label>
+        <input type="date" class="form-control" id="cpf-cliente" placeholder="DD/MM/AAAA" asp-for="@Model.DataNascimento">
     </div>
     <div class="form-group">
         <label for="genero-cliente">Genero:</label>
-        <select class="form-control" id="genero-cliente">
-            <option value="">Masculino</option>
-            <option value="">Feminino</option>
-            <option value="">Outro</option>
+        <select class="form-control" id="genero-cliente" asp-for="@Model.Genero">
+            
+            @{
+                if(Model.Genero == "MASCULINO"){
+                    <option value="MASCULINO" selected>Masculino</option>
+                    <option value="FEMININO">Feminino</option>
+                    <option value="OUTRO">Outro</option>
+                } else if (Model.Genero == "FEMININO") {
+                    <option value="MASCULINO">Masculino</option>
+                    <option value="FEMININO" selected>Feminino</option>
+                    <option value="OUTRO">Outro</option>
+                }else{
+                    <option value="MASCULINO">Masculino</option>
+                    <option value="FEMININO">Feminino</option>
+                    <option value="OUTRO" selected>Outro</option>
+                }
+            }
+            
         </select>
     </div>
-    <div class="form-group">
-        <label for="telefone-cliente">Telefone:</label>
-        <input type="text" class="form-control" id="telefone-cliente" placeholder="Telefone">
-    </div>
+
+    <!--Telefone-->
+    <fieldset class="div-form-field">
+        <h5>Telefone</h5>
+        <div class="form-group">
+            <label for="telefone-cliente">DDD:</label>
+            <input type="text" class="form-control" id="ddd-telefone-cliente" placeholder="Telefone" asp-for="@Model.Telefone.DDD">
+        </div>
+        <div class="form-group">
+            <label for="telefone-cliente">Telefone:</label>
+            <input type="text" class="form-control" id="numero-telefone-cliente" placeholder="Telefone" asp-for="@Model.Telefone.Numero">
+        </div>
+        <div class="form-group">
+            <label for="tipoLogradouro-endereco-cliente">Tipo Telefone:</label>
+            <select class="form-control" id="tipo-teletone-cliente" asp-for="@Model.Telefone.TipoTelefone.Id">
+                @{
+                    IFacadeGeneric facadeTipoTelefone = new FacadeTipoTelefone();
+
+                    foreach (TipoTelefone tipoTelefone in facadeTipoTelefone.Selecionar()) {
+                        if(tipoTelefone.Id == Model.Telefone.TipoTelefone.Id){
+                            <option value="@tipoTelefone.Id" selected>@tipoTelefone.Tipo</option>
+                        }
+                            <option value="@tipoTelefone.Id">@tipoTelefone.Tipo</option>
+
+                    }
+                }
+            </select>
+        </div>
+    </fieldset>
+
+    <!--Tipo de Usuario-->
+    <fieldset class="div-form-field">
+        <h5>Tipo Usuario</h5>
+        <div class="form-group">
+            <label for="tipoLogradouro-endereco-cliente">Tipo Usuario:</label>
+            <select class="form-control" id="tipo-teletone-cliente" asp-for="@Model.TipoUsuario.Id">
+                @{
+                    IFacadeGeneric facadeTipoUsuario = new FacadeTipoUsuario();
+
+                    foreach (TipoUsuario TipoUsuario in facadeTipoUsuario.Selecionar()) {
+                        if (TipoUsuario.Id == Model.TipoUsuario.Id) {
+                            <option value="@TipoUsuario.Id" selected>@TipoUsuario.Tipo</option>
+                        }
+
+                    }
+                }
+            </select>
+        </div>
+    </fieldset>
 
     <div class="form-group">
         <label for="pwd-cliente">Senha:</label>
-        <input type="password" class="form-control" id="pwd-cliente">
+        <input type="password" class="form-control" id="pwd-cliente" asp-for="@Model.Senha">
     </div>
 
     <div class="form-group">
@@ -38,5 +116,6 @@
         <input type="password" class="form-control" id="pwd-confirm-cliente">
     </div>
 
-    <button type="submit" class="btn btn-primary">Editar</button>
+
+    <button type="submit" class="btn btn-primary" id="atualizar-cliente">Editar</button>
 </form>

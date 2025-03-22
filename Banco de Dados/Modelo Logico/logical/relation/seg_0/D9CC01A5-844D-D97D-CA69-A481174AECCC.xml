@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK TLF TPT" directorySegmentName="seg_0" id="D9CC01A5-844D-D97D-CA69-A481174AECCC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:34:47 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useSurrogateKey>true</useSurrogateKey>
+<sourcePk>286729B1-7026-4336-36CE-AFF6B1582AEA</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0807BA1A-4C0F-2A69-9D7D-A4B6AC14C694</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F999F435-F9C1-C52B-2C58-C576134D6CC3</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

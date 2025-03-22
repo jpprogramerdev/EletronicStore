@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B544F0A9-AFDE-694B-C75E-36E61F2E1FE4" name="TIPOS_RESIDENCIA">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B544F0A9-AFDE-694B-C75E-36E61F2E1FE4" name="TIPOS RESIDENCIA">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-22 12:29:27 UTC</createdTime>
 <ownerDesignName>Modelo Logico</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="TPR_ID" id="B644BDBE-D93E-F148-8A08-4A56BBF83FE8">
+<Attribute name="TPR ID" id="B644BDBE-D93E-F148-8A08-4A56BBF83FE8">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-22 12:29:51 UTC</createdTime>
 <comment><![CDATA[Chave primaria que representa o registro do Tipo de Residencia]]></comment>
@@ -29,7 +29,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="TPR_TIPO" id="5E90A9F6-CF48-ADAE-ABB5-5C0C96F2ACFD">
+<Attribute name="TPR TIPO" id="5E90A9F6-CF48-ADAE-ABB5-5C0C96F2ACFD">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-22 12:30:25 UTC</createdTime>
 <comment><![CDATA[Coluna que identifica o tipo de residencia]]></comment>
@@ -46,7 +46,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="08EF5A7A-B595-9E69-B034-A0F7BE986A91" name="TIPOS_RESIDENCIA PK">
+<identifier id="08EF5A7A-B595-9E69-B034-A0F7BE986A91" name="PK_TPR">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-22 12:31:00 UTC</createdTime>
 <ownerDesignName>Modelo Logico</ownerDesignName>

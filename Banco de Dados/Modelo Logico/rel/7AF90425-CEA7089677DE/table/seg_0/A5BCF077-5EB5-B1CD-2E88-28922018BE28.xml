@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A5BCF077-5EB5-B1CD-2E88-28922018BE28" name="BANDEIRAS_CARTAO">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>DB0AC4FC-2C49-696A-98A3-5BCC5E7495BF</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="BDC_ID" id="F09379E4-F6DD-A349-3A29-0F1A0A442871">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro das bandeira do cartão]]></comment>
+<commentInRDBMS><![CDATA[Chave primaria que representa o registro das bandeira do cartão]]></commentInRDBMS>
+<generatorID>E3125736-C003-3C77-1981-6BAE120F9169</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="BDC_NOME" id="A2CA1D55-32DC-B936-12E8-9882ED9DCCD4">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o nome de uma bandeira]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o nome de uma bandeira]]></commentInRDBMS>
+<generatorID>89F73DBE-3B85-D03B-5B8B-34DA7AA26100</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EA7BA38E-B563-C56B-2A02-54BD2BBA8111" name="PK_BDC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>0AC41B53-4075-A6C3-DD57-D1AFBE61F408</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F09379E4-F6DD-A349-3A29-0F1A0A442871"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

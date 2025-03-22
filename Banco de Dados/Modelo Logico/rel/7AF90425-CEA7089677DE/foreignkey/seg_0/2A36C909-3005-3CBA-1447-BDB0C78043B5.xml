@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2A36C909-3005-3CBA-1447-BDB0C78043B5" containerWithKeyObject="1F4BBA20-E5A2-9838-DB32-EA2E9AD6E79E" localFKIndex="6C75375F-0F87-2C62-1771-0E50C870FAF2" name="FK_USU_TPU">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>923D54F8-53DE-BBEA-CAE1-48FDAC429965</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<referredTableLongName>TIPOS_USUARIO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>83391CDA-5887-EDB4-77CA-0C26F8EB51A4</referredTableID>
+<keyObject>1EFB85A5-F35E-13F9-5103-E43EF1B4C0BD</keyObject>
+<referredKeyID>1EFB85A5-F35E-13F9-5103-E43EF1B4C0BD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>TPU_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

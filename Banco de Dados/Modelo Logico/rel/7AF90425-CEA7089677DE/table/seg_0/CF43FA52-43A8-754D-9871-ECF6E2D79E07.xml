@@ -1,0 +1,178 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CF43FA52-43A8-754D-9871-ECF6E2D79E07" name="PRODUTOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>360180C4-E586-65C3-EBF2-B270E8CDB4B3</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PRD_ID" id="24BFC6B6-A557-21A3-1AA6-586D1FE02297">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>F2C97F35-835D-FE27-6FA7-60669B08A97B</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRD_NOME" id="0CB18A8F-A4F6-4C81-29DE-5A03A9F83AA3">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>C5E679BA-3DE8-6E4D-DAF2-9D687B274FAA</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRD_PRECO" id="ACE03C59-E68E-C2C6-1301-9E9778CC2629">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>A065F8E9-B95E-E493-D68B-EE88DEF94984</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT020</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRD_STATUS" id="D8648020-08AB-DF9A-8EF6-C1EA26B35259">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>BB7E9601-9CAE-6E24-D370-EF0C4F7F5E93</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRD_MRC_ID" id="698216DA-2D6E-740C-15A5-204395FBAEFA">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>46B622AD-6310-D2D5-5666-528C4AE66F27</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="133DA30E-7C37-4506-E960-B9A29940230E" referredColumn="F16A94F7-2821-81D7-5599-37E614A96D16"/>
+</associations>
+</Column>
+<Column name="PRD_TPP_ID" id="70F7E36E-93A8-0BA8-9ED7-1AE2D3644CED">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>FC7392FE-EC8B-8131-EC9D-EC95E24302EC</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="43EEDE41-CE69-9888-6C7E-273CE4FAFBBD" referredColumn="AF582A30-C140-2596-045C-E52817517865"/>
+</associations>
+</Column>
+<Column name="PRD_GRP_ID" id="E127B0E9-C4C4-BA7D-4ECE-6C66846D75E3">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>42872ABC-CCE0-3A40-7D2A-2D58A464E642</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6AD8D806-D737-5BB9-BE1D-6E49CAF99626" referredColumn="A6513BE0-5BB7-AA0B-D8E9-9CA808325535"/>
+</associations>
+</Column>
+<Column name="FORNECEDORES_FRD_ID" id="EE9C2972-20D4-E41E-9014-2FEEB6CCFF44">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-21 23:21:40 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="819BABE8-F942-1436-B9EC-A7FFAED496A4" referredColumn="18B5DA55-B7B6-6F27-AAD9-2BB6AE6E879F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="15B9BAF2-2E3F-B333-9CE0-9BAB01B0EDF7" name="PRODUTOS_PK">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>C42230D2-E0F2-8514-3B89-B1E8D8716A43</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="24BFC6B6-A557-21A3-1AA6-586D1FE02297"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F21B349A-16EC-9994-2BD4-13D7A116C207" name="FK_PRD_MRC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>9FB34F2E-F63B-A247-ACE5-5245D638C7A5</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="698216DA-2D6E-740C-15A5-204395FBAEFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0291BA70-909D-DBFB-8B7E-A148207FD0D1" name="FK_PRD_TPP">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>50057010-9B73-F250-652D-A1DDD40DE290</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70F7E36E-93A8-0BA8-9ED7-1AE2D3644CED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3F98BDF5-3063-C91C-04D6-7B0CF297AFC8" name="FK_PRD_GRP">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>363AFA2E-291E-3BA6-DF15-4B29051E732B</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E127B0E9-C4C4-BA7D-4ECE-6C66846D75E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B687925C-DD59-E433-B125-48526404F3EA" name="FK_PRD_FRD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-21 23:21:40 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE9C2972-20D4-E41E-9014-2FEEB6CCFF44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

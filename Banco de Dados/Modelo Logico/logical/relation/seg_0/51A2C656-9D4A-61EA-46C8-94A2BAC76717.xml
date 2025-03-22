@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK CRT BDC" directorySegmentName="seg_0" id="51A2C656-9D4A-61EA-46C8-94A2BAC76717">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 13:41:11 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<sourcePk>0AC41B53-4075-A6C3-DD57-D1AFBE61F408</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>DB0AC4FC-2C49-696A-98A3-5BCC5E7495BF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8C170900-8612-B4BB-4C18-43E2AB100923</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

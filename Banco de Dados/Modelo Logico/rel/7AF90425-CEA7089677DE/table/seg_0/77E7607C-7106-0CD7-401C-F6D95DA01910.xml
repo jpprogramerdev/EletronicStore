@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="77E7607C-7106-0CD7-401C-F6D95DA01910" name="MUNICIPIOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>D122BB7E-6EC8-3A98-842F-C551A00CF506</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MUC_ID" id="A7CDF21E-FE21-3694-4115-667E10EC4F2B">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro do municipio]]></comment>
+<commentInRDBMS><![CDATA[Chave primária que representa o registro do municipio]]></commentInRDBMS>
+<generatorID>F555F170-2DAE-90AF-067D-9FEF8E06E7D0</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MUC_NOME" id="8E70825B-11CD-F20C-F95F-1744C381467A">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o nome do municipio]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o nome do municipio]]></commentInRDBMS>
+<generatorID>F3453C14-24B5-ABF4-090F-B562B0CE9D6C</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MUC_EST_ID" id="58C73C91-EAB1-7395-B190-2E6B7523F64B">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 20:02:30 UTC</createdTime>
+<comment><![CDATA[Chave primaria que indentifica o registro do estado]]></comment>
+<generatorID>E2362598-078B-8FA2-B16C-AAFDC16D0D8E</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0BC643EA-934A-0EE4-2190-49FC8CB86368" referredColumn="14E36CD3-E0F5-E6C8-7ED4-B94B79271930"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AF82D888-8712-4EE3-2235-FE524A57BD89" name="PK_MUC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>89ED74E3-17E1-25F0-EF2A-C54AF2C17F33</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7CDF21E-FE21-3694-4115-667E10EC4F2B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="40295A2B-4DD5-3BFB-B506-A072E86EC609" name="FK_MUC_EST">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 20:02:30 UTC</createdTime>
+<generatorID>95895141-C67A-F7DD-3F8A-CFAFCFDCE220</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="58C73C91-EAB1-7395-B190-2E6B7523F64B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

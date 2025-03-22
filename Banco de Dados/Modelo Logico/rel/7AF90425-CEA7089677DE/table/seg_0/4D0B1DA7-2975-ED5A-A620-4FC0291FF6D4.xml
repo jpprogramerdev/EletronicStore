@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4D0B1DA7-2975-ED5A-A620-4FC0291FF6D4" name="CARTOES_PEDIDOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<ordsAlias>relation_29</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CTPD_CRT_ID" id="EC8A90DF-BAC1-6A85-564F-76CCC1950BA6">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A2C88DFC-A293-05D6-CD91-5F899D8F9A4C" referredColumn="6620B1AE-5C65-A8C4-74B6-FC26E3DC0A2F"/>
+</associations>
+</Column>
+<Column name="CTPD_PDD_ID" id="31D11C30-EBD3-A4A8-D4DA-A0A26337CD85">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F9ECF8A7-04A2-63F2-CEA4-29C89C54B234" referredColumn="253070BD-E10E-398B-F584-EA34370BACD4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4BAAB238-D4E2-E071-0E9E-6FAC828CD043" name="PK_CTPD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC8A90DF-BAC1-6A85-564F-76CCC1950BA6"/>
+<colUsage columnID="31D11C30-EBD3-A4A8-D4DA-A0A26337CD85"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9CA46A99-3382-A64D-8209-90EEA390E105" name="FK_CTPD_CRT">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>13721342-3648-174E-C980-78356491CE04</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC8A90DF-BAC1-6A85-564F-76CCC1950BA6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7EFA8467-7184-88C7-80AF-3BF60C08372E" name="FK_CTPD_PDD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>13721342-3648-174E-C980-78356491CE04</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31D11C30-EBD3-A4A8-D4DA-A0A26337CD85"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

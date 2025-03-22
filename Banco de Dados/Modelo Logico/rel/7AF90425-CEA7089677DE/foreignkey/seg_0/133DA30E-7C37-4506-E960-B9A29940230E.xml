@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="133DA30E-7C37-4506-E960-B9A29940230E" containerWithKeyObject="CF43FA52-43A8-754D-9871-ECF6E2D79E07" localFKIndex="F21B349A-16EC-9994-2BD4-13D7A116C207" name="FK_PRD_MRC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>9FB34F2E-F63B-A247-ACE5-5245D638C7A5</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<referredTableLongName>MARCAS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>59BCE593-55C7-0135-EDDF-83FAA38D666C</referredTableID>
+<keyObject>76A760B5-AA82-C28A-F014-08CD99F96158</keyObject>
+<referredKeyID>76A760B5-AA82-C28A-F014-08CD99F96158</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MRC_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

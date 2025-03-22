@@ -1,5 +1,5 @@
 ﻿namespace EletronicStore.Models {
-    public class BandeiraCartao {
+    public class BandeiraCartao :EntidadeDominio {
         public string Nome { get; set; }
     }
 }

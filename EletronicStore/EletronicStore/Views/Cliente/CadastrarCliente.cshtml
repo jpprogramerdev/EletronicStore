@@ -1,64 +1,114 @@
-﻿@{
+﻿@model FormCadCliente
+
+@{
     ViewData["Title"] = "Cadastro Cliente";
+
+    if (TempData["CPFJaCadastrado"] != null){
+        <div class="alert alert-danger" role="alert">
+            @TempData["CPFJaCadastrado"]
+        </div>
+    } else if (TempData["SucessoCadastro"] != null){
+        <div class="alert alert-success" role="alert">
+            @TempData["SucessoCadastro"]
+        </div>
+    } else if (TempData["SenhaForaPadrao"] != null){
+        <div class="alert alert-danger" role="alert">
+            @TempData["SenhaForaPadrao"]
+        </div>
+    } else if (TempData["FahaCadastro"] != null) {
+        <div class="alert alert-danger" role="alert">
+            @TempData["FahaCadastro"]
+        </div>
+    }
 }
 
-<form>
+<form asp-action="SalvarCliente" asp-controller="Cliente" method="post">
     <div class="form-group">
         <label for="nome-cliente">Nome completo:</label>
-        <input type="text" class="form-control" id="nome-cliente"placeholder="Nome completo">
+        <input type="text" class="form-control" id="nome-cliente"placeholder="Nome completo" asp-for="@Model.Cliente.Nome"> 
     </div>
     <div class="form-group">
         <label for="email-cliente">Email:</label>
-        <input type="email" class="form-control" id="email-cliente" placeholder="exemplo@email.com">
+        <input type="email" class="form-control" id="email-cliente" placeholder="exemplo@email.com" asp-for="@Model.Cliente.Email">
     </div>
     <div class="form-group">
         <label for="cpf-cliente">CPF:</label>
-        <input type="text" class="form-control" id="cpf-cliente" placeholder="CPF">
+        <input type="text" class="form-control" id="cpf-cliente" placeholder="CPF" asp-for="@Model.Cliente.CPF">
+    </div>
+    <div class="form-group">
+        <label for="cpf-cliente">Data de nascimento:</label>
+        <input type="date" class="form-control" id="data-nascimento-cliente" placeholder="DD/MM/AAAA" asp-for="@Model.Cliente.DataNascimento">
     </div>
     <div class="form-group">
         <label for="genero-cliente">Genero:</label>
-        <select class="form-control" id="genero-cliente">
-            <option value="">Masculino</option>
-            <option value="">Feminino</option>
-            <option value="">Outro</option>
+        <select class="form-control" id="genero-cliente" asp-for="@Model.Cliente.Genero">
+            <option value="MASCULINO">Masculino</option>
+            <option value="FEMININO">Feminino</option>
+            <option value="OUTRO">Outro</option>
         </select>
     </div>
-    <div class="form-group">
-        <label for="telefone-cliente">Telefone:</label>
-        <input type="text" class="form-control" id="telefone-cliente" placeholder="Telefone">
-    </div>
+
+    <!--Telefone-->
+    <fieldset class="div-form-field">
+        <h5>Telefone</h5>
+        <div class="form-group">
+            <label for="telefone-cliente">DDD:</label>
+            <input type="text" class="form-control" id="ddd-telefone-cliente" placeholder="Telefone" asp-for="@Model.Cliente.Telefone.DDD">
+        </div>
+        <div class="form-group">
+            <label for="telefone-cliente">Telefone:</label>
+            <input type="text" class="form-control" id="numero-telefone-cliente" placeholder="Telefone" asp-for="@Model.Cliente.Telefone.Numero">
+        </div>
+        <div class="form-group">
+            <label for="tipoLogradouro-endereco-cliente">Tipo Telefone:</label>
+            <select class="form-control" id="tipo-teletone-cliente" asp-for="@Model.Cliente.Telefone.TipoTelefone.Id">
+                @{
+                    IFacadeGeneric facadeTipoTelefone = new FacadeTipoTelefone();
+
+                    foreach (TipoTelefone tipoTelefone in facadeTipoTelefone.Selecionar()) {
+                        <option value="@tipoTelefone.Id">@tipoTelefone.Tipo</option>
+                    }
+                }
+            </select>
+        </div>
+    </fieldset>
 
     <!--Cartão-->
     <fieldset class="div-form-field">
         <h5>Cartão</h5>
         <div class="form-group">
             <label for="apelido-cartao-cliente">Apelido Cartão:</label>
-            <input type="text" class="form-control" id="apelido-cartao-cliente" placeholder="Apelido">
+            <input type="text" class="form-control" id="apelido-cartao-cliente" placeholder="Apelido" asp-for="@Model.Cartao.Apelido">
         </div>
         <div class="form-group">
             <label for="cep-endereco-cliente">Numero:</label>
-            <input type="text" class="form-control" id="numero-cartao-cliente" placeholder="Numero">
+            <input type="text" class="form-control" id="numero-cartao-cliente" placeholder="Numero" asp-for="@Model.Cartao.Numero">
         </div>
         <div class="form-group">
             <label for="tipoLogradouro-endereco-cliente">Bandeira :</label>
-            <select class="form-control" id="bandeira-cartao-cliente">
-                <option value="">MasterCard</option>
-                <option value="">Viza</option>
+            <select class="form-control" id="bandeira-cartao-cliente" asp-for="@Model.Cartao.Bandeira.Id">
+                @{
+                    IFacadeGeneric facadeBandeiraCartao = new FacadeBandeiraCartao();
+
+                    foreach (BandeiraCartao bandeiraCartao in facadeBandeiraCartao.Selecionar()) {
+                        <option value="@bandeiraCartao.Id">@bandeiraCartao.Nome</option>
+                    }
+                }
             </select>
         </div>
         <div class="form-group">
             <label for="logradouro-endereco-cliente">Data validade:</label>
-            <input type="text" class="form-control" id="dtValidade-cartao-cliente" placeholder="MM/AA">
+            <input type="text" class="form-control" id="dtValidade-cartao-cliente" placeholder="MM/AA" asp-for="@Model.Cartao.DataValidade">
         </div>
         <div class="form-group">
             <label for="numero-endereco-cliente">CVV:</label>
-            <input type="text" class="form-control" id="cvv-cartao-cliente" placeholder="Numero">
+            <input type="text" class="form-control" id="cvv-cartao-cliente" placeholder="Numero" asp-for="@Model.Cartao.CVV">
         </div>
         <div class="form-group">
             <label for="funcao-cartao-cliente">Função:</label>
-            <select class="form-control" id="funcao-cartao-cliente">
-                <option value="">Débito</option>
-                <option value="">Crédito</option>
+            <select class="form-control" id="funcao-cartao-cliente" asp-for="@Model.Cartao.Funcao">
+                <option value="DEBITO">Débito</option>
+                <option value="CREDITO">Crédito</option>
             </select>
         </div>
     </fieldset>
@@ -68,70 +118,83 @@
         <h5>Endereço</h5>
         <div class="form-group">
             <label for="apelido-endereco-cliente">Apelido endereço:</label>
-            <input type="text" class="form-control" id="apelido-endereco-cliente" placeholder="Apelido">
+            <input type="text" class="form-control" id="apelido-endereco-cliente" placeholder="Apelido" asp-for="@Model.Endereco.Apelido">
         </div>
         <div class="form-group">
             <label for="cep-endereco-cliente">CEP:</label>
-            <input type="text" class="form-control" id="cep-endereco-cliente" placeholder="CEP">
+            <input type="text" class="form-control" id="cep-endereco-cliente" placeholder="CEP" asp-for="@Model.Endereco.CEP">
         </div>
         <div class="form-group">
             <label for="tipoLogradouro-endereco-cliente">Tipo Logradouro:</label>
-            <select class="form-control" id="tipoLogradouro-endereco-cliente">
-                <option value="">Avenida</option>
-                <option value="">Rua</option>
-                <option value="">Travessa</option>
+            <select class="form-control" id="tipoLogradouro-endereco-cliente" asp-for="@Model.Endereco.TipoLogradouro.Id">
+                @{
+                    IFacadeGeneric facadeTipoLogradouro = new FacadeTipoLogradouro();
+
+                    foreach (TipoLogradouro tipoLogradouro in facadeTipoLogradouro.Selecionar()){
+                        <option value="@tipoLogradouro.Id">@tipoLogradouro.Tipo</option>
+                    }
+                }
             </select>
         </div>
         <div class="form-group">
             <label for="logradouro-endereco-cliente">Logradouro:</label>
-            <input type="text" class="form-control" id="logradouro-endereco-cliente" placeholder="Logradouro">
+            <input type="text" class="form-control" id="logradouro-endereco-cliente" placeholder="Logradouro" asp-for="@Model.Endereco.Logradouro">
         </div>
         <div class="form-group">
             <label for="numero-endereco-cliente">Numero:</label>
-            <input type="text" class="form-control" id="numero-endereco-cliente" placeholder="Numero">
+            <input type="text" class="form-control" id="numero-endereco-cliente" placeholder="Numero" asp-for="@Model.Endereco.Numero">
         </div>
         <div class="form-group">
             <label for="bairro-endereco-cliente">Bairro:</label>
-            <input type="text" class="form-control" id="bairro-endereco-cliente" placeholder="Bairro">
+            <input type="text" class="form-control" id="bairro-endereco-cliente" placeholder="Bairro" asp-for="@Model.Endereco.Bairro">
         </div>
         <div class="form-group">
             <label for="tipoLogradouro-endereco-cliente">Pais:</label>
-            <select class="form-control" id="tipoLogradouro-endereco-cliente">
-                <option value="">Brasil</option>
-                <option value="">Estados Unidos</option>
-                <option value="">Canada</option>
-            </select>
+            <input type="text" class="form-control" id="pais-endereco-cliente" placeholder="Pais" asp-for="@Model.Endereco.Municipio.Estado.Pais.Nome">
         </div>
         <div class="form-group">
             <label for="tipoLogradouro-endereco-cliente">Estado:</label>
-            <select class="form-control" id="tipoLogradouro-endereco-cliente">
-                <option value="">São Paulo</option>
-                <option value="">Minas Gerais</option>
-                <option value="">Rio de Janeiro</option>
-            </select>
+            <input type="text" class="form-control" id="estado-endereco-cliente" placeholder="Estado" asp-for="@Model.Endereco.Municipio.Estado.Nome">
         </div>
         <div class="form-group">
             <label for="tipoLogradouro-endereco-cliente">Cidade:</label>
-            <select class="form-control" id="tipoLogradouro-endereco-cliente">
-                <option value="">Mogi das Cruzes</option>
-                <option value="">São Paulo</option>
-                <option value="">Suzano</option>
-            </select>
+            <input type="text" class="form-control" id="cidade-endereco-cliente" placeholder="Cidade" asp-for="@Model.Endereco.Municipio.Nome">
         </div>
         <div class="form-group">
             <label for="numero-endereco-cliente">Observação:</label>
-            <input type="text" class="form-control" id="numero-endereco-cliente" placeholder="Observação">
+            <input type="text" class="form-control" id="observacao-endereco-cliente" placeholder="Observação" asp-for="@Model.Endereco.Observacao">
+        </div>
+        <div class="form-group">
+            <label for="tipoLogradouro-endereco-cliente">Tipo de residência:</label>
+            <select class="form-control" id="tipo-residencia-endereco-cliente" asp-for="@Model.Endereco.TipoResidencia.Id">
+                @{
+                    IFacadeGeneric facadeTipoResidencia = new FacadeTipoResidencia();
+
+                    foreach (TipoResidencia tipoResidencia in facadeTipoResidencia.Selecionar()) {
+                        <option value="@tipoResidencia.Id">@tipoResidencia.Tipo</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cobranca-endereco-cliente">Cobrança:</label>
+            <input type="checkbox" id="cobranca-endereco-cliente" asp-for="@Model.Endereco.Cobranca">
+
+            <label for="entrega-endereco-cliente">Entrega:</label>
+            <input type="checkbox" id="entrega-endereco-cliente" asp-for="@Model.Endereco.Entrega">
         </div>
     </fieldset>
 
     <div class="form-group">
         <label for="pwd-cliente">Senha:</label>
-        <input type="password" class="form-control" id="pwd-cliente">
+        <input type="password" class="form-control" id="pwd-cliente" asp-for="@Model.Cliente.Senha">
     </div>
 
     <div class="form-group">
         <label for="pwd-confirm-cliente">Confirmar Senha:</label>
         <input type="password" class="form-control" id="pwd-confirm-cliente">
     </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    <button type="submit" class="btn btn-primary" id="submit-cadastro-cliente">Cadastrar</button>
 </form>
+
+<script src="~/js/confirmPassword.js"></script>

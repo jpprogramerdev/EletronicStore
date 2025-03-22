@@ -1,0 +1,40 @@
+﻿@model Usuario
+
+@{
+    ViewData["Title"] = "Excluir cartão";
+
+    <link rel="stylesheet" href="~/css/DadosCliente.css" asp-append-version="true" />
+}
+
+
+<p class="nome-cliente">@Model.Nome</p>
+<p class="contato-cliente">
+    Email: @Model.Email |
+    Telefone (@Model.Telefone.TipoTelefone.Tipo): (@Model.Telefone.DDD) @Model.Telefone.Numero  |
+    CPF: @Model.CPF |
+    Data Nascimento: @Model.DataNascimento.ToString("dd/MM/yyyy")
+</p>
+<p class="genero-cliente">Genero: @Model.Genero</p>
+
+
+<h3 class="card-title">Cartão</h3>
+<div class="group-cards">
+    @{
+
+        foreach (Cartao Cartao in Model.Cartoes) {
+            <div class="card-item">
+                <div class="card-body">
+                    <p class="card-text">Apelido: @Cartao.Apelido</p>
+                    <p class="card-text">Numero: @Cartao.Numero</p>
+                    <p class="card-text">CVV: @Cartao.CVV</p>
+                    <p class="card-text">Data de validade: @Cartao.DataValidade</p>
+                    <p class="card-text">Bandeira: @Cartao.Bandeira.Nome</p>
+                    <p class="card-text">Função: @Cartao.Funcao</p>
+                </div>
+                <p><b>Deseja realmente excluir este cartão deste cliente</b></p>
+                <a asp-action="DeletarCartao" asp-controller="Cartao" class="btn btn-primary" asp-route-idCliente="@Model.Id" asp-route-idCartao="@Cartao.Id" id="confirmar-exclusao-cartao">Excluir</a>
+                <a asp-action="ExibirDadosCliente" asp-controller="Cliente" asp-route-id="@Model.Id" class="btn btn-secondary">Voltar</a>
+            </div>
+        }
+    }
+</div>

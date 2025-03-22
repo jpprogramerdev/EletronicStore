@@ -1,5 +1,5 @@
 ﻿namespace EletronicStore.Models {
-    public class TipoLogradouro {
+    public class TipoLogradouro : EntidadeDominio {
         public string Tipo { get; set; }
     }
 }

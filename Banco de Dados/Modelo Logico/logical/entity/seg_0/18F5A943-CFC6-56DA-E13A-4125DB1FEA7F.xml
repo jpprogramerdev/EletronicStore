@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="18F5A943-CFC6-56DA-E13A-4125DB1FEA7F" name="CARRINHO">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:59:14 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CRN_ID" id="837B0B09-2948-89C4-928F-12D70B86E346">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:59:21 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRN_QUANTIDADE" id="A638F710-BAE7-99BD-4AF2-9B6D573D0BE9">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:59:35 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRN_PRD_ID" id="B852D069-7847-9663-C4B5-8DB010C8CE4C">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:00:22 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRN_USU_ID" id="5F3223B0-3BF1-E0E8-9133-7086B26CBCD3">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:00:54 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU ID" id="C0A17728-0BFE-2900-C680-3314D18DA0EC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:03:48 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro do cliente]]></comment>
+<generatorID>19FE732B-0BF7-E3F9-DCE9-B96AA84B4727</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>02C62A05-A5A3-32CF-9A59-69B1E174BF06</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PRD_ID" id="E7DDD8EE-08F3-E0A1-A7B5-C89F3E1F8419">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:04:11 UTC</createdTime>
+<generatorID>AF4B9015-1450-5EA4-A161-3DA7AA28D02D</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>F2C97F35-835D-FE27-6FA7-60669B08A97B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PDD_ID" id="55FA058B-94C2-E14F-E8B2-44E251B5949F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:15:37 UTC</createdTime>
+<generatorID>C9FF62C1-129B-F286-7EE7-1BF3D62CE0AD</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>A25A06E8-9946-3A94-E52A-48CDA1B31DF5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E938294D-9C20-BD4D-27BD-917984B6DE75" name="CARRINHO PK">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:59:29 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>837B0B09-2948-89C4-928F-12D70B86E346</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

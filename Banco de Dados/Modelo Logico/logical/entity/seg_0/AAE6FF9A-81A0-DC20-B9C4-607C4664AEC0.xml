@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="PAS_Id" id="0B9A979A-6DA1-8CE0-95CD-65DA04F1C47B">
+<Attribute name="PAS Id" id="0B9A979A-6DA1-8CE0-95CD-65DA04F1C47B">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-22 12:20:47 UTC</createdTime>
 <comment><![CDATA[Chave primaria que identifica o registro do pais]]></comment>
@@ -29,7 +29,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="PAS_NOME" id="E07B9B26-E749-158B-99FE-C9645B92B403">
+<Attribute name="PAS NOME" id="E07B9B26-E749-158B-99FE-C9645B92B403">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-22 12:21:16 UTC</createdTime>
 <comment><![CDATA[Nome do pais]]></comment>
@@ -44,29 +44,15 @@
 <dataTypeSize>200</dataTypeSize>
 <ownDataTypeParameters>200,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="EST_ID" id="DA8CE5C5-DC01-B413-009C-AF94C08B725C">
-<createdBy>jp120</createdBy>
-<createdTime>2025-02-22 12:25:35 UTC</createdTime>
-<comment><![CDATA[Chave primaria que indentifica o registro do estado]]></comment>
-<generatorID>A2C74F92-4F33-9128-B922-CCABFBD3A677</generatorID>
-<ownerDesignName>Modelo Logico</ownerDesignName>
-<engineerTo>
-<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
-</engineerTo>
-<referedAttribute>C5A08CE9-4119-7502-BFF7-97DD040C5404</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="483BACEE-5E34-B1B4-171E-7CFF918AC00E" name="PAISES PK">
+<identifier id="483BACEE-5E34-B1B4-171E-7CFF918AC00E" name="PK_PAS">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-22 12:20:57 UTC</createdTime>
 <ownerDesignName>Modelo Logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

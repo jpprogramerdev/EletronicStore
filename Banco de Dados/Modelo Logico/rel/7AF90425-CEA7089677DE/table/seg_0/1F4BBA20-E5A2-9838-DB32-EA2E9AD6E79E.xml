@@ -1,0 +1,210 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1F4BBA20-E5A2-9838-DB32-EA2E9AD6E79E" name="USUARIOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>134BC957-8F1C-2E4B-C583-99EE024A9858</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USU_ID" id="568E502D-529E-908A-0B66-6360CCDF498B">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro do cliente]]></comment>
+<commentInRDBMS><![CDATA[Chave primária que representa o registro do usuario]]></commentInRDBMS>
+<generatorID>02C62A05-A5A3-32CF-9A59-69B1E174BF06</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USU_NOME" id="EA7344C1-CC7D-C29D-6433-D24F41221665">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o nome do usuario]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o nome do usuario]]></commentInRDBMS>
+<generatorID>D6EA6334-4FEB-6D77-3BA5-C1BF0F23A5A8</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USU_EMAIL" id="6B5019C8-C437-1059-6BED-68595CC4F013">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o email do usuario]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o email do usuario]]></commentInRDBMS>
+<generatorID>ADC2D675-A41D-50CD-017E-0EF8E3907D7F</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USU_SENHA" id="AFD102C0-38D5-E79D-56B0-D8766D20C9A2">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Coluna que identifica o senha  do usuario(deverá ser criptografada)]]></commentInRDBMS>
+<generatorID>ACAE461D-4110-7E1E-07A3-663C2F94FAB6</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USU_CPF" id="DE95CB18-8CFE-1CA3-04A8-AD7211E0AD4F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o CPF  do usuario]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o CPF  do usuario]]></commentInRDBMS>
+<generatorID>06F31909-4B8D-398B-0EF9-A9D1A9EE2343</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USU_DATA_NASCIMENTO" id="6F645E0E-20BA-AFB8-A29E-59DCB17D151F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Coluna que identifica o data de nascimento do usuario]]></commentInRDBMS>
+<generatorID>896F9FA0-F0B3-E918-3287-1C1303C80625</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USU_GNR_ID" id="17D080B7-1EB1-F39D-A2F8-6B62D6DA1AF5">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro dos generos dos usuarios]]></comment>
+<generatorID>76902B4A-B197-C9BD-126A-1662B16A5812</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1DEC8E87-34E4-4AD5-913C-E72C262B3D41" referredColumn="64380097-F5FE-E1FB-78A7-60067E8707BB"/>
+</associations>
+</Column>
+<Column name="USU_TPU_ID" id="E4FB8CE5-EC21-1EC4-24BA-56ED71B49E2E">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro dos tipos  dos usuarios]]></comment>
+<generatorID>A12B43A6-4F0E-8582-A88E-4DF2D7361FA0</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2A36C909-3005-3CBA-1447-BDB0C78043B5" referredColumn="E762D266-373D-0927-EE89-AA8C1B0B327D"/>
+</associations>
+</Column>
+<Column name="USU_TLF_ID" id="8A3A5173-5DA2-588C-61EC-FA178FE14368">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<comment><![CDATA[Chave primária que rerpesenta o registro dos telefones]]></comment>
+<generatorID>E367375F-C13E-1DEF-9921-6538D1F3A520</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D7B4F74F-ADFF-D51F-6DFB-3FF021E7D03B" referredColumn="D0714A96-7E00-D163-0982-9EC469E494A3"/>
+</associations>
+</Column>
+<Column name="USU_STATUS" id="06990B5D-7C53-AB47-A7E1-A29243FE396F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-04 19:20:20 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5E2D4D58-4E1D-D9D5-D4E4-2CE26E68BE8D" name="PK_USU">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>39D6B494-FCB6-5820-117A-A33FB0E30B7C</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="568E502D-529E-908A-0B66-6360CCDF498B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="013F24C0-BE57-DD23-F00F-6BCE049D0C45" name="UNQ_USU_CPF">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-24 22:09:12 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE95CB18-8CFE-1CA3-04A8-AD7211E0AD4F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4FD40871-D183-816D-8ABC-435012A137EC" name="FK_USU_GNR">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>89BDE5EE-C197-DB3F-51E4-EFD31BFC7176</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="17D080B7-1EB1-F39D-A2F8-6B62D6DA1AF5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6C75375F-0F87-2C62-1771-0E50C870FAF2" name="FK_USU_TPU">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>923D54F8-53DE-BBEA-CAE1-48FDAC429965</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4FB8CE5-EC21-1EC4-24BA-56ED71B49E2E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC378895-C4EC-E1A5-C795-55404DA502D7" name="FK_USU_TLF">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>8B8FC8E8-7CC4-CF44-05FD-6F580F41C0BA</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A3A5173-5DA2-588C-61EC-FA178FE14368"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

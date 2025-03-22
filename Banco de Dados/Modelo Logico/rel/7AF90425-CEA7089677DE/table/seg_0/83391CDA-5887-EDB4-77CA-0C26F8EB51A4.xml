@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="83391CDA-5887-EDB4-77CA-0C26F8EB51A4" name="TIPOS_USUARIO">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>00707962-4317-F3C5-E7D4-17456C90266B</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TPU_ID" id="E762D266-373D-0927-EE89-AA8C1B0B327D">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro dos tipos  dos usuarios]]></comment>
+<commentInRDBMS><![CDATA[Chave primária que representa o registro dos tipos  dos usuarios]]></commentInRDBMS>
+<generatorID>0C9DFC88-2F24-CF9E-E1A5-D35B60B744B7</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TPU_TIPO" id="588E683A-9B7C-CED3-DD19-2C25B4302B22">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o tipo de usuario]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o tipo de usuario]]></commentInRDBMS>
+<generatorID>EDF5BB63-A192-262C-1EAA-9B482539FB97</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1EFB85A5-F35E-13F9-5103-E43EF1B4C0BD" name="PK_TPU">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>14D518F8-B3E0-EF4E-7F13-44FF272FBE46</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E762D266-373D-0927-EE89-AA8C1B0B327D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

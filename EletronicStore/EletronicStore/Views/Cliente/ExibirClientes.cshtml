@@ -1,8 +1,43 @@
-﻿@{
+﻿@model IEnumerable<Usuario>
+
+@{
     ViewData["Title"] = "Exibir Clientes";
 
     <link rel="stylesheet" href="~/css/TabelaCliente.css" asp-append-version="true" />
+
 }
+
+<form asp-action="ExibirClientes" asp-controller="Cliente" method="get">
+    <div class="row align-items-end">
+
+        <div class="col-md-3">
+            <label for="Nome">Nome:</label>
+            <input type="text" name="filterNome" id="filter-nome" class="form-control" />
+        </div>
+
+        <div class="col-md-3">
+            <label for="Email">Email:</label>
+            <input type="text" name="filterEmail" id="filter-email" class="form-control" />
+        </div>
+
+        <div class="col-md-3">
+            <label for="Status">Status:</label>
+            <select name="filterStatus" id ="filter-status" class="form-control">
+                <option value="">Todos</option>
+                <option value="1">Ativo</option>
+                <option value="0">Inativo</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary w-100" id="submit-filter">Filtrar</button>
+        </div>
+
+    </div>
+</form>
+
+<br>
+<br>
 
 <table class="table table-cliente">
     <thead>
@@ -15,27 +50,40 @@
         </tr>
     </thead>
     <tbody>
-        <tr class="cliente-ativo">
-            <td>João Pedro Gerotto Fernandes</td>
-            <td>joao@gmail.com</td>
-            <td>2</td>
-            <td>2</td>
-            <td>e
-                <a asp-action="ExibirDadosCliente" asp-controller="Cliente"><i class="bi bi-info-circle-fill"></i></a> |
-                <a asp-action="AtualizarCliente" asp-controller="Cliente"><i class="bi bi-pencil-fill"></i></a> | 
-                <a><i class="bi bi-lock-fill"></i></a>
-            </td>
-        </tr>
-        <tr class="cliente-desativado">
-            <td>Caique Alves Nascimento</td>
-            <td>alves_nascimento@hotmail.com</td>
-            <td>1</td>
-            <td>3</td>
-            <td>
-                <a asp-action="ExibirDadosCliente" asp-controller="Cliente"><i class="bi bi-info-circle-fill"></i></a> |
-                <a asp-action="AtualizarCliente" asp-controller="Cliente"><i class="bi bi-pencil-fill"></i></a> |
-                <a><i class="bi bi-unlock-fill"></i></a>
-            </td>
-        </tr>
+
+        @{
+            foreach (Usuario Cliente in Model) {
+
+                if (Cliente.Status) {
+                    <tr class="cliente-ativo">
+                        <td>@Cliente.Nome</td>
+                        <td>@Cliente.Email</td>
+                        <td>@Cliente.Enderecos.Count()</td>
+                        <td>@Cliente.Cartoes.Count()</td>
+                        <td>
+                            <a asp-action="ExibirDadosCliente" asp-controller="Cliente" asp-route-id="@Cliente.Id" id="informacao-cliente">Exibir</a> |
+                            <a asp-action="AtualizarCliente" asp-controller="Cliente" asp-route-id="@Cliente.Id">Editar</a> |
+                            <a asp-action="AlterarStatusCliente" asp-controller="Cliente" asp-route-id="@Cliente.Id" id="usuario-ativo">Inativar</a> |
+                            <a asp-action="AlterarSomenteSenha" asp-controller="Cliente" asp-route-id="@Cliente.Id" id="alterar-senha-usuario">Alterar Senha</a>
+                        </td>
+                    </tr>
+                }else{
+                    <tr class="cliente-desativado">
+                        <td>@Cliente.Nome</td>
+                        <td>@Cliente.Email</td>
+                        <td>@Cliente.Enderecos.Count()</td>
+                        <td>@Cliente.Cartoes.Count()</td>
+                        <td>
+                            <a asp-action="ExibirDadosCliente" asp-controller="Cliente" asp-route-id="@Cliente.Id">Exibir</a> |
+                            <a asp-action="AtualizarCliente" asp-controller="Cliente" asp-route-id="@Cliente.Id">Editar</a> |
+                            <a asp-action="AlterarStatusCliente" asp-controller="Cliente" asp-route-id="@Cliente.Id" id="usuario-inativo">Ativar</a> |
+                            <a asp-action="AlterarSomenteSenha" asp-controller="Cliente" asp-route-id="@Cliente.Id" id="alterar-senha-usuario">Alterar Senha</a>
+                        </td>
+                    </tr>
+                }
+            }
+
+        }
+
     </tbody>
 </table>

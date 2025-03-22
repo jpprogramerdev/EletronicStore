@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F999F435-F9C1-C52B-2C58-C576134D6CC3" name="TELEFONES">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:29:06 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="TLF ID" id="B9392D2E-227A-AEAE-4782-FB7A43DB0DCD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:29:20 UTC</createdTime>
+<comment><![CDATA[Chave primária que rerpesenta o registro dos telefones]]></comment>
+<commentInRDBMS><![CDATA[Chave primária que rerpesenta o registro dos telefones]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TLF DDD" id="2796553C-DE08-A5CE-0411-C0FC792EEB51">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:30:23 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o DDD do telefone]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o DDD do telefone]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TLF NUMERO" id="01ADFF11-0B36-F472-ABB1-76A5E1BE38ED">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:31:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[Coluna que identifica o numero do telefone]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TLF_TPT_ID" id="1CF02A54-7E5C-76A9-733E-98F4E981E552">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:33:38 UTC</createdTime>
+<comment><![CDATA[Chave estrangeria que faz referencia ao tipo de telefone]]></comment>
+<commentInRDBMS><![CDATA[Chave estrangeria que faz referencia ao tipo de telefone]]></commentInRDBMS>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TLF TPT ID" id="99D7F251-2CF6-E1DF-15FC-D7CF25DA9B60">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:20:10 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D4188284-FC83-8370-7F99-6491F18BF5C5" name="PK_TLF">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:30:22 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B9392D2E-227A-AEAE-4782-FB7A43DB0DCD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

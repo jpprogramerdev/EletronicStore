@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_3" directorySegmentName="seg_0" id="24AC79DF-F1EA-1612-A296-84B93BE9E6BB">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK END TPR" directorySegmentName="seg_0" id="24AC79DF-F1EA-1612-A296-84B93BE9E6BB">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-22 12:40:51 UTC</createdTime>
 <ownerDesignName>Modelo Logico</ownerDesignName>
