@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2EA2413D-2272-5F41-88EC-778EB688055B" name="TELEFONES">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>F999F435-F9C1-C52B-2C58-C576134D6CC3</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TLF_ID" id="D0714A96-7E00-D163-0982-9EC469E494A3">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primária que rerpesenta o registro dos telefones]]></comment>
+<commentInRDBMS><![CDATA[Chave primária que rerpesenta o registro dos telefones]]></commentInRDBMS>
+<generatorID>B9392D2E-227A-AEAE-4782-FB7A43DB0DCD</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TLF_DDD" id="47A48CE7-F41D-55A9-F854-09C22A4E8257">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o DDD do telefone]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o DDD do telefone]]></commentInRDBMS>
+<generatorID>2796553C-DE08-A5CE-0411-C0FC792EEB51</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TLF_NUMERO" id="662852E9-18D6-DB62-2251-3704C34E3874">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[Coluna que identifica o numero do telefone]]></commentInRDBMS>
+<generatorID>01ADFF11-0B36-F472-ABB1-76A5E1BE38ED</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TLF_TPT_ID" id="122A1E0B-0A64-E4BE-696A-4B9A5F8F72DA">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 20:08:58 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DC5E68A2-DBF2-91EA-E068-6E20ECA8DB5A" referredColumn="60BC968E-5B31-AB58-C9FE-74BBAC920DEE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="363761D4-B3AE-5F37-AE2C-F0DF29420568" name="PK_TLF">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>D4188284-FC83-8370-7F99-6491F18BF5C5</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D0714A96-7E00-D163-0982-9EC469E494A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D6CC8952-54AD-1A57-37DC-3DCE4BAEB965" name="FK_TLF_TPT">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>D9CC01A5-844D-D97D-CA69-A481174AECCC</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="122A1E0B-0A64-E4BE-696A-4B9A5F8F72DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

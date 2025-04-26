@@ -1,0 +1,71 @@
+﻿@model Pedido
+
+@{
+    ViewData["Title"] = "Exibir Pedido";
+
+    <link rel="stylesheet" href="~/css/InformacaoPedido.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/DadosCliente.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Carrinho.css" asp-append-version="true" />
+}
+
+
+
+<div class="info-cliente-endereco-pedido">
+    <p class="numero-pedido">Pedido #@Model.Id</p>
+
+    <div class="info-cliente-pedido">
+        <p class="card-title">Cliente</p>
+        <p class="dados-cliente">Nome: @Model.Usuario.Nome</p>
+        <p class="dados-cliente">Email: @Model.Usuario.Email</p>
+        <p class="dados-cliente">Telefone(@Model.Usuario.Telefone.TipoTelefone.Tipo): (@Model.Usuario.Telefone.DDD) @Model.Usuario.Telefone.Numero </p>
+    </div>
+
+    <div class="info-entrega-pedido">
+        <p class="card-title">Endereço entrega</p>
+        <p class="card-text">Apelido: @Model.Endereco.Apelido</p>
+        <p class="card-text">CEP: @Model.Endereco.CEP</p>
+        <p class="card-text">Tipo Logradouro: @Model.Endereco.TipoLogradouro.Tipo</p>
+        <p class="card-text">Logradouro: @Model.Endereco.Logradouro</p>
+        <p class="card-text">Numero: @Model.Endereco.Numero</p>
+        <p class="card-text">Bairro: @Model.Endereco.Bairro</p>
+        <p class="card-text">Tipo Residencia: @Model.Endereco.TipoResidencia.Tipo</p>
+        <p class="card-text">Pais: @Model.Endereco.Municipio.Estado.Pais.Nome</p>
+        <p class="card-text">Estado: @Model.Endereco.Municipio.Estado.Nome</p>
+        <p class="card-text">Municipio: @Model.Endereco.Municipio.Nome</p>
+    </div>
+
+    <div class="info-pedido">
+        <p class="card-title">Pedido</p>
+
+        @foreach(ItemPedido item in Model.Produtos){
+            <div class="item-produto">
+                <div class="card-produto">
+                    <div class="miniatura-img-produto">
+                        <img src="@item.Produto.URL_Imagem" alt="Produto" />
+                    </div>
+                    <div class="informacao-produto">
+                        <p class="nome-produto">@item.Produto.Nome - @item.Produto.Marca.Nome</p>
+                        <p class="preco-unitario-produto">R$ @item.Produto.Preco.ToString("F2")</p>
+                        <p class="quantidade-produto">Qtde. @item.Quantidade</p>
+                        <p class="valor-total-produto">Total: <strong>R$ @((@item.Produto.Preco * @item.Quantidade).ToString("F2"))</strong></p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if(Model.Cupons.Count != 0){
+        <div class="info-pedido">
+            <p class="card-title">Cupons Utilizados</p>
+
+            @foreach (Cupom Cupom in Model.Cupons) {
+                <p class="card-title">@Cupom.Nome</p>
+            }
+        </div>
+    }
+
+    @if (Model.Status == "EM PROCESSAMENTO"){
+        <br />
+        <a asp-controller="Pedido" asp-action="AlterarStatusPedido" asp-route-pedidoId="@Model.Id" asp-route-status="CANCELADO" class="btn btn-primary">CANCELAR PEDIDO</a>
+    }
+</div>

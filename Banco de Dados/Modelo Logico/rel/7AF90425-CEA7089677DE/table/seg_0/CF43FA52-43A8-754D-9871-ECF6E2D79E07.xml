@@ -40,10 +40,21 @@
 <ownerDesignName>Modelo Logico</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT020</logicalDatatype>
+<logicalDatatype>LOGDT026</logicalDatatype>
 <dataTypePrecision>10</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRD_DESCRICAO" id="CEBF565C-545C-B501-3092-0388F2DB934C">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-22 23:53:40 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="PRD_STATUS" id="D8648020-08AB-DF9A-8EF6-C1EA26B35259">
@@ -56,6 +67,17 @@
 <logicalDatatype>LOGDT006</logicalDatatype>
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRD_URL_IMG" id="08EE10B1-F7E2-84F9-8E24-E8331FC17D1D">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-27 23:14:55 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="PRD_MRC_ID" id="698216DA-2D6E-740C-15A5-204395FBAEFA">
@@ -103,7 +125,7 @@
 <colAssociation fkAssociation="6AD8D806-D737-5BB9-BE1D-6E49CAF99626" referredColumn="A6513BE0-5BB7-AA0B-D8E9-9CA808325535"/>
 </associations>
 </Column>
-<Column name="FORNECEDORES_FRD_ID" id="EE9C2972-20D4-E41E-9014-2FEEB6CCFF44">
+<Column name="PRD_FRD_ID" id="EE9C2972-20D4-E41E-9014-2FEEB6CCFF44">
 <createdBy>jp120</createdBy>
 <createdTime>2025-03-21 23:21:40 UTC</createdTime>
 <ownerDesignName>Modelo Logico</ownerDesignName>
@@ -119,7 +141,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="15B9BAF2-2E3F-B333-9CE0-9BAB01B0EDF7" name="PRODUTOS_PK">
+<ind_PK_UK id="15B9BAF2-2E3F-B333-9CE0-9BAB01B0EDF7" name="PK_PRD">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-28 00:38:45 UTC</createdTime>
 <generatorID>C42230D2-E0F2-8514-3B89-B1E8D8716A43</generatorID>

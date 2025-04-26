@@ -1,0 +1,35 @@
+﻿@model FormInativacaoProduto
+
+@{
+    ViewData["Title"] = "Inativar Produto";
+
+    <link rel="stylesheet" href="~/css/Produto.css" asp-append-version="true" />
+}
+<div class="div-produto">
+    
+    <div class="imagem-produto">
+        <img src="@Model.Produto.URL_Imagem" alt="Alternate Text" />
+    </div>
+    <div class="informacao-produto">
+        <p class="titulo-produto">@Model.Produto.Nome</p>
+        <p class="nome-marca-produto">@Model.Produto.Marca.Nome</p>
+        <p class="valor-produto">R$ @((Model.Produto.Preco * Model.Produto.GrupoPrecificacao.Margem).ToString("F2"))</p>
+    </div>
+    <div class="carrinho-compra">
+        <p class="quantidade-disponivel-produto">@Model.Produto.QuantidadeEstoque disponível</p>
+    </div>
+
+    <div class="div-descricao">
+        <p class="descricao-produto">@Model.Produto.Descricao</p>
+    </div>
+</div>
+
+<form asp-action="AlterarStatusProduto" asp-controller="Produto" method="post">
+    <input type="hidden" asp-for="@Model.Produto.Id" />
+    <div class="form-group">
+        <label for="motivo-troca-produto">Motivo Inativação:</label>
+        <input type="text" class="form-control" id="motivo-inativacao-produto" asp-for="@Model.Motivo">
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="submit-inativacao-produto">Enviar</button>
+</form>

@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D122BB7E-6EC8-3A98-842F-C551A00CF506" name="MUNICIPIOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:25:43 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="MUC ID" id="F555F170-2DAE-90AF-067D-9FEF8E06E7D0">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:25:54 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro do municipio]]></comment>
+<commentInRDBMS><![CDATA[Chave primária que representa o registro do municipio]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MUC NOME" id="F3453C14-24B5-ABF4-090F-B562B0CE9D6C">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:26:00 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o nome do municipio]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o nome do municipio]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MUC_EST_ID" id="9F4858FC-2109-78CB-100E-4715BE373BD0">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:27:33 UTC</createdTime>
+<comment><![CDATA[Chave estrangeira que identifica o estado do municipio]]></comment>
+<commentInRDBMS><![CDATA[Chave estrangeira que identifica o estado do municipio]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MUC EST ID" id="E2362598-078B-8FA2-B16C-AAFDC16D0D8E">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 20:02:23 UTC</createdTime>
+<comment><![CDATA[Chave primaria que indentifica o registro do estado]]></comment>
+<generatorID>95895141-C67A-F7DD-3F8A-CFAFCFDCE220</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>C5A08CE9-4119-7502-BFF7-97DD040C5404</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END ID" id="205833A9-051B-5A47-0447-8E0641427FDE">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:20:10 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro do endereço]]></comment>
+<generatorID>56F059B8-7C61-677D-8A35-5BBE33628412</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>928A4654-8D02-200A-0067-6CA3CD457D01</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="89ED74E3-17E1-25F0-EF2A-C54AF2C17F33" name="PK_MUC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:26:15 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F555F170-2DAE-90AF-067D-9FEF8E06E7D0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="69DB4F90-2903-15A7-C83A-A492DA2A4484" name="CARRINHO">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>18F5A943-CFC6-56DA-E13A-4125DB1FEA7F</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CRN_QUANTIDADE" id="750128C7-98B0-949F-46CF-C114452DE16D">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>A638F710-BAE7-99BD-4AF2-9B6D573D0BE9</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRN_CRIADO" id="1086D485-8F39-5986-A843-65D1D46018EF">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-18 12:43:30 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRN_USU_ID" id="D9301530-6453-F6CA-144D-D34EC3B3F1F8">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro do cliente]]></comment>
+<generatorID>C0A17728-0BFE-2900-C680-3314D18DA0EC</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D58CBB60-9643-0B65-1CA2-7073100ECE37" referredColumn="568E502D-529E-908A-0B66-6360CCDF498B"/>
+</associations>
+</Column>
+<Column name="CRN_PRD_ID" id="E04CDB6F-4087-284C-BDBB-DB48DD6BE9C8">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>E7DDD8EE-08F3-E0A1-A7B5-C89F3E1F8419</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="44FE8055-E08D-EF1E-EBEE-2F3597C44303" referredColumn="24BFC6B6-A557-21A3-1AA6-586D1FE02297"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F32E7068-B615-3939-625F-D5DEBBD46A42" name="FK_CRN_USU">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>19FE732B-0BF7-E3F9-DCE9-B96AA84B4727</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D9301530-6453-F6CA-144D-D34EC3B3F1F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2CDD10DE-6B3A-1084-52BC-9BA52D581284" name="FK_CRN_PRD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>AF4B9015-1450-5EA4-A161-3DA7AA28D02D</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E04CDB6F-4087-284C-BDBB-DB48DD6BE9C8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

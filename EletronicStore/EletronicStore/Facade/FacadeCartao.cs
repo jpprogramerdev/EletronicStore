@@ -1,4 +1,5 @@
 ﻿using EletronicStore.DAO;
+using EletronicStore.DAO.Interface;
 using EletronicStore.Facade.Interface;
 using EletronicStore.Models;
 

@@ -8,17 +8,14 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="CRN_ID" id="C5FEA4B2-69DE-C766-DDE8-55E7FF35F494">
+<Column name="CRN_ID" id="AE430221-BC31-2F5F-456B-AA76BCD0AF3C">
 <createdBy>jp120</createdBy>
-<createdTime>2025-02-28 00:38:45 UTC</createdTime>
-<generatorID>837B0B09-2948-89C4-928F-12D70B86E346</generatorID>
+<createdTime>2025-04-02 22:54:20 UTC</createdTime>
 <ownerDesignName>Modelo Logico</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementColumn>true</autoIncrementColumn>
-<identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="CRN_QUANTIDADE" id="750128C7-98B0-949F-46CF-C114452DE16D">
@@ -32,7 +29,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="CRN_USU_ID1" id="D9301530-6453-F6CA-144D-D34EC3B3F1F8">
+<Column name="CRN_USU_ID" id="D9301530-6453-F6CA-144D-D34EC3B3F1F8">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-28 00:38:45 UTC</createdTime>
 <comment><![CDATA[Chave primária que representa o registro do cliente]]></comment>
@@ -48,7 +45,7 @@
 <colAssociation fkAssociation="D58CBB60-9643-0B65-1CA2-7073100ECE37" referredColumn="568E502D-529E-908A-0B66-6360CCDF498B"/>
 </associations>
 </Column>
-<Column name="CRN_PRD_ID1" id="E04CDB6F-4087-284C-BDBB-DB48DD6BE9C8">
+<Column name="CRN_PRD_ID" id="E04CDB6F-4087-284C-BDBB-DB48DD6BE9C8">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-28 00:38:45 UTC</createdTime>
 <generatorID>E7DDD8EE-08F3-E0A1-A7B5-C89F3E1F8419</generatorID>
@@ -65,19 +62,18 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="9353E712-0C8C-607F-B84A-4870B03251B2" name="PK_CRN">
+<ind_PK_UK id="A6357468-4CF1-F5E5-BB69-BDFBEB44379D" name="PK_CRN">
 <createdBy>jp120</createdBy>
-<createdTime>2025-02-28 00:38:45 UTC</createdTime>
-<generatorID>E938294D-9C20-BD4D-27BD-917984B6DE75</generatorID>
+<createdTime>2025-04-02 22:54:20 UTC</createdTime>
 <ownerDesignName>Modelo Logico</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="C5FEA4B2-69DE-C766-DDE8-55E7FF35F494"/>
+<colUsage columnID="AE430221-BC31-2F5F-456B-AA76BCD0AF3C"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="F32E7068-B615-3939-625F-D5DEBBD46A42" name="F_CRN_USU">
+<ind_PK_UK id="F32E7068-B615-3939-625F-D5DEBBD46A42" name="FK_CRN_USU">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-28 00:38:45 UTC</createdTime>
 <generatorID>19FE732B-0BF7-E3F9-DCE9-B96AA84B4727</generatorID>

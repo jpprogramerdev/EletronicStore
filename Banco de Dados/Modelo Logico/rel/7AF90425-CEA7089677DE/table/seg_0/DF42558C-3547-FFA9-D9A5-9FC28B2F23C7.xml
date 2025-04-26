@@ -102,17 +102,6 @@
 <colUsage columnID="398E2036-9413-FDEE-B60D-074974CF3634"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="8709007D-EA89-1F17-EE71-7DD23933CF57" name="FK_SLT_PDD">
-<createdBy>jp120</createdBy>
-<createdTime>2025-02-28 00:38:45 UTC</createdTime>
-<generatorID>88E85D34-5E13-59CA-2E50-FA7B37FC3625</generatorID>
-<ownerDesignName>Modelo Logico</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="7675BB22-4277-4CAE-9F72-5F5AB0957193"/>
-</indexColumnUsage>
-</ind_PK_UK>
 <ind_PK_UK id="BCCC2798-9DC0-A6D7-1ED0-8D5894D3BB7D" name="FK_SLT_STP">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-28 00:38:45 UTC</createdTime>
@@ -122,6 +111,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="24DE8993-CC7D-360A-8BBC-B6F3CBF6BF41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8709007D-EA89-1F17-EE71-7DD23933CF57" name="FK_SLT_PDD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>88E85D34-5E13-59CA-2E50-FA7B37FC3625</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7675BB22-4277-4CAE-9F72-5F5AB0957193"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

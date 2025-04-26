@@ -1,0 +1,357 @@
+﻿@model Carrinho
+
+@{
+    ViewData["Title"] = "Meu Carrinho";
+    <link rel="stylesheet" href="~/css/Carrinho.css" asp-append-version="true" />
+
+    if (TempData["FalhaFinalizarPedido"] != null) {
+        <div class="alert alert-danger" role="alert">
+            @TempData["FalhaFinalizarPedido"]
+        </div>
+    }
+}
+
+@{
+    if (Model.ItensCarrinho.Count == 0) {
+        <div class="container-carrinho-vazio">
+            <p>Carrrinho vazio</p>
+        </div>
+    } else {
+
+        <form asp-controller="Pedido" asp-action="AdicionarPedido" method="post">
+            <input type="hidden" asp-for="@Model.Usuario.Id" />
+
+            <div class="container-carrinho">
+                <!-- Produtos -->
+                @{
+                    for (int i = 0; i < Model.ItensCarrinho.Count; i++) {
+                        <div class="group-card-produto">
+                            <input type="hidden" asp-for="@Model.ItensCarrinho[i].Id" />
+                            <input type="hidden" asp-for="@Model.ItensCarrinho[i].Quantidade" />
+                            <div class="card-produto">
+                                <div class="miniatura-img-produto">
+                                    <img src="@Model.ItensCarrinho[i].Produto.URL_Imagem" alt="Produto" />
+                                </div>
+                                <div class="informacao-produto">
+                                    <p class="nome-produto">@Model.ItensCarrinho[i].Produto.Nome</p>
+                                    <p class="preco-produto">Valor unit: R$ @Model.ItensCarrinho[i].Produto.Preco</p>
+                                    <p class="preco-produto">Valor total (@Model.ItensCarrinho[i].Quantidade unid): R$ @((Model.ItensCarrinho[i].Produto.Preco * Model.ItensCarrinho[i].Quantidade).ToString("F2"))</p>
+                                    <a class="btn btn-danger" id="excluir-item" asp-route-itemid="@Model.ItensCarrinho[i].Id" asp-route-usuarioId="@Model.Usuario.Id" asp-action="RemoverItemCarrinho" asp-controller="Carrinho">Remover</a>
+                                    <input type="checkbox" class="checkbox-item" data-total="@((Model.ItensCarrinho[i].Produto.Preco * Model.ItensCarrinho[i].Quantidade).ToString("F2"))" asp-for="ItensCarrinho[i].ExclusaoCarrinho" id="checkbox-item" />
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+                }
+
+
+                <!-- Info da compra -->
+                <div class="div-info-compra">
+                    <div id="cupons-aplicados" style="margin-top: 10px;">
+                        <h5>Cupons aplicados:</h5>
+                        <ul id="lista-cupons" class="list-group"></ul>
+                        <div id="cupons-escondidos">
+                            @if (Model.Cupons != null) {
+                                for (int i = 0; i < Model.Cupons.Count; i++) {
+                                    <input type="hidden" name="CodigosCupons[@i]" value="@Model.Cupons[i]" />
+                                }
+                            }
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label for="codigoCupom">Código do Cupom:</label>
+                        <input type="text" id="codigoCupom" class="form-control" placeholder="Digite o cupom" />
+                        <button type="button" class="btn btn-success mt-2" id="btnAplicarCupom">Aplicar Cupom</button>
+                        <p id="mensagemCupom" style="margin-top: 5px;"></p>
+                    </div>
+                    @{
+                        double valorTotal = 0;
+
+                        foreach (ItemPedido Item in Model.ItensCarrinho) {
+                                valorTotal += Item.Produto.Preco * Item.Quantidade;
+                        }
+
+                        <div class="valor-carrinho">
+                            <p class="total-label">Total: R$ <span id="valorTotal">@valorTotal.ToString("F2")</span></p>
+                        </div>
+
+
+                    }
+                    <!-- Endereço -->
+                    <div class="list-enderecos">
+                        <button type="button" class="btn btn-primary btn-sm" id="btnAdicionarEndereco">Adicionar Novo Endereço</button>
+                        <label for="select-enderecos">Endereço para entrega:</label>
+                        <select class="form-control" id="select-enderecos" asp-for="@Model.Endereco.Id">
+                            @{
+                                foreach (Endereco Endereco in Model.Usuario.Enderecos) {
+                                    <option value="@Endereco.Id">@Endereco.Apelido</option>
+                                }
+                            }
+                        </select>
+
+                        <!-- Formulário de Novo Endereço -->
+                        <div class="form-novo-endereco" style="display: none; margin-top: 10px;">
+                            <div class="form-group">
+                                <label for="apelido-endereco-cliente">Apelido endereço:</label>
+                                <input type="text" class="form-control" id="apelido-endereco-cliente" placeholder="Apelido" asp-for="@Model.Endereco.Apelido">
+                            </div>
+                            <div class="form-group">
+                                <label for="cep-endereco-cliente">CEP:</label>
+                                <input type="text" class="form-control" id="cep-endereco-cliente" placeholder="CEP" asp-for="@Model.Endereco.CEP">
+                            </div>
+                            <div class="form-group">
+                                <label for="tipoLogradouro-endereco-cliente">Tipo Logradouro:</label>
+                                <select class="form-control" id="tipoLogradouro-endereco-cliente" asp-for="@Model.Endereco.TipoLogradouro.Id">
+                                    @{
+                                        IFacadeGeneric facadeTipoLogradouro = new FacadeTipoLogradouro();
+
+                                        foreach (TipoLogradouro tipoLogradouro in facadeTipoLogradouro.Selecionar()) {
+                                            <option value="@tipoLogradouro.Id">@tipoLogradouro.Tipo</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="logradouro-endereco-cliente">Logradouro:</label>
+                                <input type="text" class="form-control" id="logradouro-endereco-cliente" placeholder="Logradouro" asp-for="@Model.Endereco.Logradouro">
+                            </div>
+                            <div class="form-group">
+                                <label for="numero-endereco-cliente">Numero:</label>
+                                <input type="text" class="form-control" id="numero-endereco-cliente" placeholder="Numero" asp-for="@Model.Endereco.Numero">
+                            </div>
+                            <div class="form-group">
+                                <label for="bairro-endereco-cliente">Bairro:</label>
+                                <input type="text" class="form-control" id="bairro-endereco-cliente" placeholder="Bairro" asp-for="@Model.Endereco.Bairro">
+                            </div>
+                            <div class="form-group">
+                                <label for="tipoLogradouro-endereco-cliente">Pais:</label>
+                                <input type="text" class="form-control" id="pais-endereco-cliente" placeholder="Pais" asp-for="@Model.Endereco.Municipio.Estado.Pais.Nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="tipoLogradouro-endereco-cliente">Estado:</label>
+                                <input type="text" class="form-control" id="estado-endereco-cliente" placeholder="Estado" asp-for="@Model.Endereco.Municipio.Estado.Nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="tipoLogradouro-endereco-cliente">Cidade:</label>
+                                <input type="text" class="form-control" id="cidade-endereco-cliente" placeholder="Cidade" asp-for="@Model.Endereco.Municipio.Nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="numero-endereco-cliente">Observação:</label>
+                                <input type="text" class="form-control" id="observacao-endereco-cliente" placeholder="Observação" asp-for="@Model.Endereco.Observacao">
+                            </div>
+                            <div class="form-group">
+                                <label for="tipoLogradouro-endereco-cliente">Tipo de residência:</label>
+                                <select class="form-control" id="tipo-residencia-endereco-cliente" asp-for="@Model.Endereco.TipoResidencia.Id">
+                                    @{
+                                        IFacadeGeneric facadeTipoResidencia = new FacadeTipoResidencia();
+
+                                        foreach (TipoResidencia tipoResidencia in facadeTipoResidencia.Selecionar()) {
+                                            <option value="@tipoResidencia.Id">@tipoResidencia.Tipo</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cobranca-endereco-cliente">Adicionar aos meus endereços:</label>
+                                <input type="checkbox" id="adicionar-endereco-cliente" asp-for="@Model.AdicionarEndereco">
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <!-- Cartão -->
+                    <div class="list-cartoes" style="margin-top: 20px;">
+                        <button type="button" class="btn btn-primary btn-sm" id="btnAdicionarCartao">Novo Cartão</button>
+                        <label for="select-cartao">Cartão para pagamento:</label>
+                        <select class="form-control" id="select-cartao" asp-for="@Model.Cartao.Id">
+                            @{
+                                foreach (Cartao Cartao in Model.Usuario.Cartoes) {
+                                    <option value="@Cartao.Id">@Cartao.Apelido</option>
+                                }
+
+                                for (int i = 0; i < Model.Usuario.Cartoes.Count; i++) {
+                                    <input type="hidden" asp-for="@Model.Usuario.Cartoes[i]" />
+                                }
+                            }
+                        </select>
+
+                    </div>
+
+                    <!-- Formulário de Novo Cartão -->
+                    <div class="form-novo-cartao" style="display: none; margin-top: 10px;">
+                        <div class="form-group">
+                            <label for="apelido-cartao-cliente">Apelido Cartão:</label>
+                            <input type="text" class="form-control" id="apelido-cartao-cliente" placeholder="Apelido" asp-for="@Model.Cartao.Apelido">
+                        </div>
+                        <div class="form-group">
+                            <label for="cep-endereco-cliente">Numero:</label>
+                            <input type="text" class="form-control" id="numero-cartao-cliente" placeholder="Numero" asp-for="@Model.Cartao.Numero">
+                        </div>
+                        <div class="form-group">
+                            <label for="tipoLogradouro-endereco-cliente">Bandeira :</label>
+                            <select class="form-control" id="bandeira-cartao-cliente" asp-for="@Model.Cartao.Bandeira.Id">
+                                @{
+                                    IFacadeGeneric facadeBandeiraCartao = new FacadeBandeiraCartao();
+
+                                    foreach (BandeiraCartao bandeiraCartao in facadeBandeiraCartao.Selecionar()) {
+                                        <option value="@bandeiraCartao.Id">@bandeiraCartao.Nome</option>
+                                    }
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="logradouro-endereco-cliente">Data validade:</label>
+                            <input type="text" class="form-control" id="dtValidade-cartao-cliente" placeholder="MM/AA" asp-for="@Model.Cartao.DataValidade">
+                        </div>
+                        <div class="form-group">
+                            <label for="numero-endereco-cliente">CVV:</label>
+                            <input type="text" class="form-control" id="cvv-cartao-cliente" placeholder="Numero" asp-for="@Model.Cartao.CVV">
+                        </div>
+                        <div class="form-group">
+                            <label for="funcao-cartao-cliente">Função:</label>
+                            <select class="form-control" id="funcao-cartao-cliente" asp-for="@Model.Cartao.Funcao">
+                                <option value="DEBITO">Débito</option>
+                                <option value="CREDITO">Crédito</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cobranca-endereco-cliente">Adicionar aos meus cartões:</label>
+                            <input type="checkbox" id="adicionar-endereco-cliente" asp-for="@Model.AdicionarCartao">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-success" id="btnConfirmarCompra">Finalizar compra</button>
+            </div>
+        </form>
+    }
+}
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let cuponsAplicados = [];
+
+            function calcularTotalSelecionado() {
+                let totalSelecionado = 0;
+                $('.checkbox-item:checked').each(function() {
+                    totalSelecionado += parseFloat($(this).data('total').toString().replace(',', '.'));
+                });
+                $('#valorTotal').text(totalSelecionado.toFixed(2));
+                return parseFloat(totalSelecionado.toFixed(2));
+            }
+
+            $('#btnAplicarCupom').click(function () {
+                var codigo = $('#codigoCupom').val().trim();
+
+                if (codigo === "") {
+                    $('#mensagemCupom').text("Por favor, insira um código de cupom.").css("color", "red");
+                    return;
+                }
+
+                if (cuponsAplicados.some(c => c.codigo === codigo)) {
+                    $('#mensagemCupom').text("Cupom já aplicado.").css("color", "orange");
+                    return;
+                }
+
+                $.ajax({
+                    url: '/Carrinho/VerificarCupom',
+                    type: 'GET',
+                    data: { codigo: codigo },
+                    success: function (response) {
+                        if (response.valido) {
+                            $('#mensagemCupom').text(response.mensagem).css("color", "green");
+
+                            const desconto = parseFloat(response.desconto);
+
+                            cuponsAplicados.push({ codigo: codigo, desconto: desconto, id: response.id });
+
+                            $('#lista-cupons').append(`
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    ${codigo}
+                                    <button type="button" class="btn btn-sm btn-danger btn-remover-cupom" data-codigo="${codigo}">Remover</button>
+                                </li>
+                            `);
+
+                            aplicarDescontos();
+                        } else {
+                            $('#mensagemCupom').text(response.mensagem).css("color", "red");
+                        }
+                    }
+                });
+            });
+
+            $(document).on('click', '.btn-remover-cupom', function () {
+                const codigo = $(this).data('codigo');
+                cuponsAplicados = cuponsAplicados.filter(c => c.codigo !== codigo);
+                $(this).parent().remove();
+                aplicarDescontos();
+            });
+
+            function aplicarDescontos() {
+                let totalComDesconto = calcularTotalSelecionado();
+
+                $('input[name^="Cupons"]').remove();
+
+                cuponsAplicados.forEach((c, index) => {
+                    totalComDesconto -= c.desconto;
+                    $('#btnConfirmarCompra').before(`<input type="hidden" name="Cupons[${index}].Id" value="${c.id}">`);
+                });
+
+                if (totalComDesconto < 0) {
+                    totalComDesconto = 0;
+                }
+
+                $('.total-label').text("Total: R$ " + totalComDesconto.toFixed(2).replace(".", ","));
+            }
+
+            $('.checkbox-item').change(function() {
+                calcularTotalSelecionado();
+                aplicarDescontos();
+            });
+
+            calcularTotalSelecionado();
+
+            let usandoNovoEndereco = false;
+            let selectEnderecosHtml = $('#select-enderecos').prop('outerHTML');
+
+            $('#btnAdicionarEndereco').click(function () {
+                usandoNovoEndereco = !usandoNovoEndereco;
+
+                if (usandoNovoEndereco) {
+                    $('#select-enderecos').remove();
+                    $('.form-novo-endereco').show();
+                    $(this).text('Usar endereço existente');
+                } else {
+                    $('.form-novo-endereco').before(selectEnderecosHtml);
+                    $('.form-novo-endereco').hide();
+                    $(this).text('+ Novo Endereço');
+                }
+            });
+
+
+            let usandoNovoCartao = false;
+            let selectCartaoHtml = $('#select-cartao').prop('outerHTML');
+
+
+            $('#btnAdicionarCartao').click(function () {
+                usandoNovoCartao = !usandoNovoCartao;
+
+                if(usandoNovoCartao){
+                    $('#select-cartao').remove();
+                    $('.form-novo-cartao').show();
+                    $(this).text('Usar cartão existente');
+                } else {
+                    $('.form-novo-cartao').before(selectCartaoHtml);
+                    $('.form-novo-cartao').hide();
+                    $(this).text('+ Novo Cartão');
+                }
+            });
+        });
+    </script>
+}
+

@@ -1,0 +1,41 @@
+﻿@model SolicitacaoTroca
+
+@{
+    ViewData["Title"] = "Solicitar troca";
+
+    if (TempData["NenhumProdutoSelecionado"] != null){
+        <div class="alert alert-danger" role="alert">
+            @TempData["NenhumProdutoSelecionado"]
+        </div>
+    }
+}
+
+<link rel="stylesheet" href="~/css/Carrinho.css" asp-append-version="true" />
+
+
+<!-- Seção dos produtos -->
+<form asp-action="SalvarSolicitacaoTroca" asp-controller="Pedido" method="post">
+    <h5>Selecione o produto que deseja solicitar a troca:</h5>
+    <div class="group-card-produto">
+        <input type="hidden" asp-for="@Model.PedidoId" />
+        @for(int i = 0; i < Model.Produtos.Count; i++){
+            <div class="card-produto">
+                <input type="hidden" asp-for="@Model.Produtos[i].Produto.Id" />
+                <div class="miniatura-img-produto">
+                    <img src="@Model.Produtos[i].Produto.URL_Imagem" alt="Produto" />
+                </div>
+                <div class="informacao-produto">
+                    <p class="nome-produto">@Model.Produtos[i].Produto.Nome - @Model.Produtos[i].Produto.Marca.Nome</p>
+                    <p class="quantidade-produto">Qtde para solicitar troca.</p>  <input type="number" min="1" max="@Model.Produtos[i].QuantidadePedido" value="1" asp-for="@Model.Produtos[i].QuantidadeTroca"/>
+                </div>
+                <input type="checkbox" asp-for="@Model.Produtos[i].SoliciarTrocar" />
+                <div class="form-group">
+                    <label for="motivo-troca-produto">Motivo:</label>
+                    <input type="text" class="form-control" id="motivo-troca-produto" asp-for="@Model.Produtos[i].Motivo">
+                </div>
+            </div>
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="submit-troca-produto">Solicitar</button>
+</form>

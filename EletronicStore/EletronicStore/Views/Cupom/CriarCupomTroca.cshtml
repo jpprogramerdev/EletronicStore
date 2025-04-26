@@ -1,0 +1,15 @@
+﻿@model Cupom
+
+@{
+    ViewData["Title"] = "Criar Cupom Troca";
+}
+
+<form asp-action="SalvarCupomTroca" asp-controller="Cupom" method="post">
+    <input type="hidden" asp-for="@Model.Usuario.Id" />
+    <h1>Criar Cupom de Troca</h1>
+    <div class="form-group">
+        <label for="nome-produto">Valor de desconto:</label>
+        <input type="number" class="form-control" id="desconto-cupom" placeholder="Desconto" asp-for="@Model.Desconto" step="0.1">
+    </div>
+    <button type="submit" class="btn btn-primary" id="submit-cadastro-produto">Criar</button>
+</form>

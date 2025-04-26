@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E7F24F9C-CEE2-4E1D-B893-0E0D4E303773" name="ESTADOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:22:30 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="EST ID" id="C5A08CE9-4119-7502-BFF7-97DD040C5404">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:22:42 UTC</createdTime>
+<comment><![CDATA[Chave primaria que indentifica o registro do estado]]></comment>
+<commentInRDBMS><![CDATA[Chave primaria que indentifica o registro do estado]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EST NOME" id="8BDBDFFD-FD51-EB8B-5203-4DFECAB244AE">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:23:22 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o nome do estado]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o nome do estado]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EST_PAS_ID" id="1A250A29-0203-3E58-ACEA-81D6214CCEC4">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:24:02 UTC</createdTime>
+<comment><![CDATA[Chave estrangeira que faz referencia ao pais que o estado pertence ]]></comment>
+<commentInRDBMS><![CDATA[Chave estrangeira que faz referencia ao pais que o estado pertence ]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PAS Id" id="89C5F587-F046-C726-930B-1F31A6B07160">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 20:02:13 UTC</createdTime>
+<comment><![CDATA[Chave primaria que identifica o registro do pais]]></comment>
+<generatorID>A2C74F92-4F33-9128-B922-CCABFBD3A677</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>0B9A979A-6DA1-8CE0-95CD-65DA04F1C47B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="EBFBAEFC-11BA-3368-2F4E-03120AA2CC7E" name="PK_EST">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:22:56 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C5A08CE9-4119-7502-BFF7-97DD040C5404</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

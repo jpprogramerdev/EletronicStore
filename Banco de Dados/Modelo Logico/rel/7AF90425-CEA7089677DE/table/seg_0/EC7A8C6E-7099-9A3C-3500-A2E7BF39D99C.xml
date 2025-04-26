@@ -46,6 +46,21 @@
 <ownDataTypeParameters>,10,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="CPN_USU_ID" id="AE4D45B4-8BF1-3F44-94FF-69E6F32ED25A">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-27 23:05:30 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C5951792-638F-E4EC-8CAE-C1FDD9A0C077" referredColumn="568E502D-529E-908A-0B66-6360CCDF498B"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="AF35E454-24DD-CF41-8367-EA628D526D05" name="PK_CPN">
@@ -58,6 +73,17 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="E3D953A0-20C7-6C95-8581-563F196F51B0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="91CBAF39-56F3-BA7A-41A3-842B23886035" name="FK_CPN_USU">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-27 23:05:30 UTC</createdTime>
+<generatorID>39D6B494-FCB6-5820-117A-A33FB0E30B7C</generatorID>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE4D45B4-8BF1-3F44-94FF-69E6F32ED25A"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

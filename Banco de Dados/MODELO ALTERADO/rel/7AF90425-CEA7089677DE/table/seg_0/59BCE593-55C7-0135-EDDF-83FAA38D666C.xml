@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="59BCE593-55C7-0135-EDDF-83FAA38D666C" name="MARCAS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>621AC98A-E1B4-D960-D173-D5D317B0C2BE</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="MRC_ID" id="F16A94F7-2821-81D7-5599-37E614A96D16">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>DB927C27-63DC-9509-E3F4-101E984D6481</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MRC_NOME" id="C4EDCB32-DB99-3D01-310A-1F0D0D9F62B5">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>C3BDDFDE-BBB6-AB62-0DF3-D15571BEC111</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="76A760B5-AA82-C28A-F014-08CD99F96158" name="PK_MRC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>4B2F0261-F047-00AF-914A-3A7E45AD83DD</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F16A94F7-2821-81D7-5599-37E614A96D16"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

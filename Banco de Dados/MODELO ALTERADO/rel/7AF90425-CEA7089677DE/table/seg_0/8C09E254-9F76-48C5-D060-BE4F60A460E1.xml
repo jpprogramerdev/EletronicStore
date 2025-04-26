@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8C09E254-9F76-48C5-D060-BE4F60A460E1" name="TIPOS_LOGRADOURO">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>D6BC7140-5F7F-1BFC-213B-2D6D3956B8FF</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TPL_ID" id="6736C537-C9DF-9F54-909E-15BD98BD3EE5">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro do tipo de logradouro]]></comment>
+<commentInRDBMS><![CDATA[Chave primaria que representa o registro do tipo de logradouro]]></commentInRDBMS>
+<generatorID>07DB8D4D-E549-11CD-4B3C-D5CA7215FA49</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TPL_TIPO" id="526E619E-3D17-DE4A-6FA7-250F945F124D">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o tipo de logradouro do endereço]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o tipo de logradouro do endereço]]></commentInRDBMS>
+<generatorID>D3C28D56-C6C6-F156-C4B6-71CB052E2A9C</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CAC37430-5842-00E4-A1F7-EAB9A29BFC8D" name="PK_TPL">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>CAB67A42-0471-441C-B46B-1B05B0F1DED5</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6736C537-C9DF-9F54-909E-15BD98BD3EE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

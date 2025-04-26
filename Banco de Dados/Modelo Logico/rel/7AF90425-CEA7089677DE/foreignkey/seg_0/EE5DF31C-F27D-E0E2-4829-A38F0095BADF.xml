@@ -9,7 +9,7 @@
 <referredTableID>EC7A8C6E-7099-9A3C-3500-A2E7BF39D99C</referredTableID>
 <keyObject>AF35E454-24DD-CF41-8367-EA628D526D05</keyObject>
 <referredKeyID>AF35E454-24DD-CF41-8367-EA628D526D05</referredKeyID>
-<mandatory>true</mandatory>
+<mandatory>false</mandatory>
 <refColNames>CPN_ID</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>

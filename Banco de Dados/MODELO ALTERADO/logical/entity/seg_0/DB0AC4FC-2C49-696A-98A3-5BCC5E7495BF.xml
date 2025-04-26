@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DB0AC4FC-2C49-696A-98A3-5BCC5E7495BF" name="BANDEIRAS CARTAO">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:41:46 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="BDC ID" id="E3125736-C003-3C77-1981-6BAE120F9169">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:42:00 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro das bandeira do cartão]]></comment>
+<commentInRDBMS><![CDATA[Chave primaria que representa o registro das bandeira do cartão]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BDC NOME" id="89F73DBE-3B85-D03B-5B8B-34DA7AA26100">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:42:29 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o nome de uma bandeira]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o nome de uma bandeira]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0AC41B53-4075-A6C3-DD57-D1AFBE61F408" name="PK_BDC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:42:12 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E3125736-C003-3C77-1981-6BAE120F9169</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,36 @@
+﻿.info-cliente-endereco-pedido{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+}
+
+p.numero-pedido {
+    font-size: 2.1rem;
+    font-weight: 550;
+}
+
+.info-cliente-pedido, .info-entrega-pedido, .info-pedido {
+    width: 50%;
+    margin-top: 2vh;
+    box-shadow: -4px 6px 50px -60px rgba(0, 0, 0, 0.75);
+    border: solid 1px #bebebe;
+    border-radius: 10px;
+    padding: 2vh;
+}
+
+p.titulo-card {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.info-cliente-entrega p.dados-cliente {
+    font-size: 1.1rem;
+    font-weight: 420;
+}
+
+.item-produto {
+    border-top: 2px solid #333; 
+    padding: 10px;
+    margin-bottom: 10px; 
+}

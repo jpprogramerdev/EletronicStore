@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A191A4E3-EB2C-0B4D-51A4-587B7D22A414" containerWithKeyObject="B7CFA965-AA87-0621-716F-B1D3D87DA526" localFKIndex="D523F5B5-1DC9-82BC-402D-E90A4DD824A3" name="FK_CPPD_CPN">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-07 00:10:09 UTC</createdTime>
+<generatorID>895BD057-E3FC-8C3A-7483-44B53ADA78AA</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<referredTableLongName>CUPONS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EC7A8C6E-7099-9A3C-3500-A2E7BF39D99C</referredTableID>
+<keyObject>AF35E454-24DD-CF41-8367-EA628D526D05</keyObject>
+<referredKeyID>AF35E454-24DD-CF41-8367-EA628D526D05</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CPN_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

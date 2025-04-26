@@ -1,0 +1,79 @@
+﻿.div-produto {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Três colunas: imagem, informações e botões */
+    grid-template-rows: auto auto; /* Duas linhas: conteúdo principal e descrição */
+    align-items: start;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 900px;
+    margin: auto;
+}
+
+.imagem-produto img {
+    width: 100%; /* Ajusta a largura da imagem */
+    min-width: 300px;
+    max-width: 400px; /* Limita o tamanho da imagem */
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.informacao-produto {
+    text-align: left;
+}
+
+.titulo-produto {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nome-marca-produto {
+    font-size: 14px;
+    color: gray;
+}
+
+.valor-produto {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.carrinho-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+    .carrinho-compra a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; /* Faz com que ambos ocupem toda a largura disponível */
+        min-width: 150px; /* Define um tamanho mínimo */
+        max-width: 200px; /* Evita que fiquem muito largos */
+        padding: 10px;
+        text-align: center;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+.quantidade-disponivel-produto {
+    font-size: 1.2rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+.div-descricao {
+    grid-column: 1 / -1; /* Faz a descrição ocupar toda a largura */
+    text-align: justify;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: #686868;
+    border-top: 1px solid #ccc;
+}
+

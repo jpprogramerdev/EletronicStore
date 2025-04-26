@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Produto>
+
+@{
+    ViewData["Title"] = "Exibir todos produtos";
+
+    <link rel="stylesheet" href="~/css/CardProduto.css" asp-append-version="true" />
+
+    if (TempData["SucessoInativarProduto"] != null){        
+        <div class="alert alert-success" role="alert">
+            @TempData["SucessoInativarProduto"]
+        </div>
+    } else if (TempData["FalhaInativarProduto"] != null) {
+        <div class="alert alert-danger" role="alert">
+            @TempData["FalhaInativarProduto"]
+        </div>
+    } else if (TempData["SucessoAtivarProduto"] != null) {
+        <div class="alert alert-success" role="alert">
+            @TempData["SucessoAtivarProduto"]
+        </div>
+    }
+}
+
+<form asp-action="ExibirTodosProdutos" asp-controller="Produto" method="get">
+    <div class="row align-items-end">
+
+        <div class="col-md-2">
+            <label for="Nome">Nome:</label>
+            <input type="text" name="filterNomeProduto" id="filter-nome-produto" class="form-control" />
+        </div>
+
+        <div class="col-md-2">
+            <label for="Nome">Marca:</label>
+            <input type="text" name="filterMarcaProduto" id="filter-marca-produto" class="form-control" />
+        </div>
+
+        <div class="col-md-2">
+            <label for="Status">Tipo Produto:</label>
+            <select name="filterTipoProduto" id="filter-tipo-produto" class="form-control">
+                <option value="">Todos</option>
+                
+                @{
+                    IFacadeGeneric facadeTipoProduto = new FacadeTipoProduto();
+
+                    foreach (TipoProduto tipo in facadeTipoProduto.Selecionar()) {
+                        <option value="@tipo.Id">@tipo.Tipo</option>
+                    }
+                }
+            </select>
+        </div>
+
+        <div class="col-md-2">
+            <label for="Status">Status Produtos:</label>
+            <select name="filterStatusProduto" id="filter-status" class="form-control">
+                <option value="1">Ativados</option>
+                <option value="0">Desativado</option>
+            </select>
+        </div>
+
+
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100" id="submit-filter">Filtrar</button>
+        </div>
+
+    </div>
+</form>
+
+
+<div class="painel-card">
+
+    @{
+        foreach(Produto item in Model){
+            <div class="card" style="width: 18rem;">
+                <a asp-action="ExibirProduto" asp-controller="Produto" class="link-produto" id="link-produto" asp-route-id="@item.Id">
+                    <img class="card-img-top" src="@item.URL_Imagem" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Nome</h5>
+                        <p class="card-text-marca">@item.Marca.Nome</p>
+                        <p class="card-text-price">R$ @((item.Preco * item.GrupoPrecificacao.Margem).ToString("F2"))</p>
+                        <a class="btn btn-primary" asp-action="EditarProduto" asp-controller="Produto" id="editar-produto" asp-route-id="@item.Id">Editar</a>
+
+                        @if(item.Status){
+                            <a class="btn btn-danger" asp-action="InativarProduto" asp-controller="Produto" id="alterar-status-produto" asp-route-id="@item.Id">Inativar</a>
+                        }else{
+                            <a class="btn btn-success" asp-action="InativarProduto" asp-controller="Produto" id="alterar-status-produto" asp-route-id="@item.Id">Ativar</a>
+
+                        }
+
+                    </div>
+                </a>
+            </div>
+        }
+    }
+</div>

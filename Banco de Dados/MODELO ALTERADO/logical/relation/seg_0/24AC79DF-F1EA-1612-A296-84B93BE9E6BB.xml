@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FK END TPR" directorySegmentName="seg_0" id="24AC79DF-F1EA-1612-A296-84B93BE9E6BB">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:40:51 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<sourcePk>08EF5A7A-B595-9E69-B034-A0F7BE986A91</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B544F0A9-AFDE-694B-C75E-36E61F2E1FE4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BB94EA6B-5751-9F2E-B1BB-9F2A27459245</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

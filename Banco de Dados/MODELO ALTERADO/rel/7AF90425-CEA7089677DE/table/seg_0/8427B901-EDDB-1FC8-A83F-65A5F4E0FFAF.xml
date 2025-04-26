@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8427B901-EDDB-1FC8-A83F-65A5F4E0FFAF" name="CARTOES">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>8C170900-8612-B4BB-4C18-43E2AB100923</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CRT_ID" id="6620B1AE-5C65-A8C4-74B6-FC26E3DC0A2F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro dos cartões]]></comment>
+<commentInRDBMS><![CDATA[Chave primaria que representa o registro dos cartões]]></commentInRDBMS>
+<generatorID>62B68AD5-9986-EA93-EC63-DB5302BCF629</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRT_NUMERO" id="983C305C-0FF2-6AD8-BF8A-4022EC076A2D">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o numero do cartão]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o numero do cartão]]></commentInRDBMS>
+<generatorID>673CDB34-1B91-20ED-42E7-334F63BDBC45</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRT_CVV" id="5903933F-B047-F26D-204E-6F67866E85B7">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o CVV/ Código de segurança  do cartão]]></comment>
+<generatorID>5506DF96-D356-D238-39E2-763635FE505E</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRT_APELIDO" id="5FB3248D-C419-D94F-A904-33C936F7E5AB">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o apelido  do cartão]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o apelido  do cartão]]></commentInRDBMS>
+<generatorID>039DE955-B215-A4B4-63E3-8798B09968CD</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRT_FUNCAO" id="3E2B4B94-2FC7-6A86-D3D7-483CB7348D06">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 22:36:49 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CRT_BDC_ID" id="014B7A2B-B102-187B-5A23-091B2EFEF021">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro das bandeira do cartão]]></comment>
+<generatorID>C52C0095-2942-5E3B-5449-7AE9E826897A</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="044B6133-296C-0657-8BC8-8B3F0C7A5572" referredColumn="F09379E4-F6DD-A349-3A29-0F1A0A442871"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BD99309D-2724-2DE4-F650-BF457E6AB633" name="PK_CRT">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>DD2AC9E3-D175-C109-D250-26ADA6BBFDCA</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6620B1AE-5C65-A8C4-74B6-FC26E3DC0A2F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4328E64-5B1C-F44C-AC35-3B3D4887EC7F" name="FK_CRT_BDC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>51A2C656-9D4A-61EA-46C8-94A2BAC76717</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="014B7A2B-B102-187B-5A23-091B2EFEF021"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

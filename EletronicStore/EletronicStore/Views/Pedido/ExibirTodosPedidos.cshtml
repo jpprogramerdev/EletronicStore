@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Pedido>
+
+@{
+    ViewData["Title"] = "Exibir Todos Pedidos";
+
+    <link rel="stylesheet" href="~/css/Carrinho.css" asp-append-version="true" />
+
+    if (TempData["SucessoFinalizarPedido"] != null) {
+        <div class="alert alert-success" role="alert">
+            @TempData["SucessoFinalizarPedido"]
+        </div>
+    } else if (TempData["FalhaSolicitacaoTroca"] != null){
+        <div class="alert alert-danger" role="alert">
+            @TempData["FalhaSolicitacaoTroca"]
+        </div>
+    } else if (TempData["FalhaAtualizarStatus"] != null) {
+        <div class="alert alert-danger" role="alert">
+            @TempData["FalhaAtualizarStatus"]
+        </div>
+    } else if (TempData["FalhaAoGerarCupom"] != null){
+        <div class="alert alert-danger" role="alert">
+            @TempData["FalhaAoGerarCupom"]
+        </div>
+    } else if (TempData["CupomTrocaCriado"] != null){
+        <div class="alert alert-success" role="alert">
+            @Html.Raw(TempData["CupomTrocaCriado"])
+        </div>
+    }
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Número Compra</th>
+            <th scope="col">Cliente</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Última Atualização</th>
+            <th scope="col">Status</th>
+            <th scope="col">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach(Pedido Pedido in Model){
+                <tr>
+                    <th scope="row">@Pedido.Id</th>
+                    <td>@Pedido.Usuario.Nome</td>
+                    <td>(@Pedido.Usuario.Telefone.DDD) @Pedido.Usuario.Telefone.Numero</td>
+                    <td>@Pedido.Usuario.Email</td>
+                    <td><strong>@Pedido.UltimaAtualizacao</strong></td>
+                    <td>@Pedido.Status</td>
+                    <td>
+                        <a asp-controller="Pedido" asp-action="ExibirPedido" asp-route-id="@Pedido.Id" style="text-decoration:none">Exibir</a>
+                        @{
+                            if(Pedido.Status == "EM PROCESSAMENTO"){ 
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" class="link-success" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="APROVADO">APROVAR</a>
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" class="link-danger" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="REPROVADO">REPROVAR</a>
+                            }else if(Pedido.Status == "APROVADO"){
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="EM TRANSPORTE">MUDAR PARA "EM TRANSPORTE"</a>
+                            } else if (Pedido.Status == "EM TRANSPORTE") {
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="ENTREGUE">MUDAR PARA "ENTREGUE"</a>
+                            } else if (Pedido.Status == "ENTREGUE") {
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="SolicitarTroca" style="text-decoration:none" asp-route-id="@Pedido.Id">SOLICITAR TROCA</a>
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="DEVOLUÇÃO SOLICITADA">SOLICITAR DEVOLUÇÃO</a>
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="PEDIDO CONCLUIDO">CONCLUIR PEDIDO</a>
+                            }else if (Pedido.Status == "TROCA SOLICITADA"){
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="ExibirSolicitacao" style="text-decoration:none" asp-route-id="@Pedido.Id">VERIFICAR SOLICITAÇÃO</a>
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" class="link-success" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="TROCA ACEITA">APROVAR TROCA</a>
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" class="link-danger" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="TROCA RECUSADA">REPROVAR TROCA</a>
+                            }else if(Pedido.Status == "TROCA ACEITA"){
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="TROCA CONCLUÍDA">CONCLUIR TROCA</a>
+                            } else if (Pedido.Status == "DEVOLUÇÃO SOLICITADA"){
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" class="link-success" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="DEVOLUÇÃO CONCLUÍDA">APROVAR DEVOLUÇÃO</a>
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" class="link-danger" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="DEVOLUÇÃO RECUSADA">REPROVAR DEVOLUÇÃO</a>
+                            } else if(Pedido.Status != "PEDIDO CONCLUIDO") {
+                                <span>|</span>
+                                <a asp-controller="Pedido" asp-action="AlterarStatusPedido" style="text-decoration:none" asp-route-pedidoId="@Pedido.Id" asp-route-status="PEDIDO CONCLUIDO">CONCLUIR PEDIDO</a>
+                            }
+                        }
+                    </td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>

@@ -4,10 +4,10 @@ using OpenQA.Selenium.Support.UI;
 using Bogus;
 
 namespace SeleniumBot {
-    class AutomationWeb {
+    class ClienteAutomation {
         public IWebDriver driver;
 
-        public AutomationWeb() {
+        public ClienteAutomation() {
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--disable-blink-features=AutomationControlled"); // Oculta a automação
             options.AddExcludedArgument("enable-automation"); // Remove a flag de automação
@@ -18,6 +18,42 @@ namespace SeleniumBot {
             
 
             driver.Navigate().GoToUrl("https://localhost:7055");
+
+            CriarNovoUsuario();
+            CadastrarSenhaForaDoPadrao();
+            Aguardar3Segundos();
+            CadastrarSenhaCorreto();
+            Aguardar3Segundos();
+            ClicarExibirClientes();
+            Aguardar3Segundos();
+            FiltrarUusarios();
+            int ClienteSelecionado = SelecionarIdCliente();
+            Aguardar3Segundos();
+            VisualizarCliente(ClienteSelecionado);
+            Aguardar3Segundos();
+            ClicarExibirClientes();
+            Aguardar3Segundos();
+            ClicarAlterarStatusCliente(ClienteSelecionado);
+            Aguardar3Segundos();
+            ClicarAlterarStatusCliente(ClienteSelecionado);
+            Aguardar3Segundos();
+            ClicarExibirClientes();
+            Aguardar3Segundos();
+            CriarNovoEndereco(ClienteSelecionado);
+            Aguardar3Segundos();
+            CriarNovoCartao(ClienteSelecionado);
+            Aguardar3Segundos();
+            DeletarCartao();
+            Aguardar3Segundos();
+            DeletarEndereco();
+            Aguardar3Segundos();
+            EditarCartao();
+            Aguardar3Segundos();
+            EditarEndereco();
+            Aguardar3Segundos();
+            ClicarExibirClientes();
+            Aguardar3Segundos();
+            EditarCliente(ClienteSelecionado);
         }
 
         public void CadastrarSenhaForaDoPadrao() {
@@ -152,10 +188,7 @@ namespace SeleniumBot {
             }
         }
 
-        public void ClicarAlterarSenha() {
-            var linkAlterarSenha = driver.FindElement(By.Id("alterar-senha-usuario"));
-            linkAlterarSenha.Click();
-        }
+
 
         public void ClicarAlterarStatusCliente(int IdCliente) {
             var linkAtivarClientes = driver.FindElement(By.XPath($"//a[@href='/Cliente/AlterarStatusCliente/{IdCliente}']"));

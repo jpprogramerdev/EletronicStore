@@ -1,0 +1,188 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.container-carrinho {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.group-card-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-produto {
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 16px;
+}
+
+.miniatura-img-produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.informacao-produto {
+    padding: 0 16px;
+}
+
+.nome-produto {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.preco-unitario-produto {
+    font-size: 16px;
+    color: #555;
+}
+
+.botoes-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.botoes-produto button {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.botoes-produto button:hover {
+    background-color: #0056b3;
+}
+
+.div-info-compra {
+    background-color: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.valor-carrinho {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    border-top: 1px solid #ddd;
+    padding-top: 16px;
+}
+
+.opcoes-cartao-endereco {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.list-enderecos,
+.list-cartoes,
+.form-cartao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+select,
+input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-cartao {
+    margin-top: 10px;
+    display: none;
+}
+
+.form-cartao.show {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-cartao input {
+    width: 100%;
+}
+
+.container-carrinho-vazio {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .card-produto {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .botoes-produto {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .valor-carrinho {
+        text-align: center;
+    }
+}
+
+
+.cupom-aplicado {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    position: relative;
+}
+
+    .cupom-aplicado .remover-cupom {
+        background: none;
+        border: none;
+        color: #d9534f;
+        font-size: 1.2em;
+        position: absolute;
+        top: -5px;
+        right: -8px;
+        cursor: pointer;
+    }
+
+        .cupom-aplicado .remover-cupom:hover {
+            color: #c9302c;
+        }

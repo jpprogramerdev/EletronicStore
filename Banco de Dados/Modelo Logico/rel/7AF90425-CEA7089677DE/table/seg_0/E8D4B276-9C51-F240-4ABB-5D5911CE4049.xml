@@ -32,26 +32,12 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="PDD_CRN_ID" id="3F602DB2-CE75-8542-3628-DF8B3E2C529F">
-<createdBy>jp120</createdBy>
-<createdTime>2025-02-28 00:38:45 UTC</createdTime>
-<generatorID>32C0CE53-D961-2DB6-9F56-64BA078C7F4C</generatorID>
-<ownerDesignName>Modelo Logico</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="0116C8D6-38A7-DF70-FF3F-2814A568B85B" referredColumn="C5FEA4B2-69DE-C766-DDE8-55E7FF35F494"/>
-</associations>
-</Column>
 <Column name="PDD_CPN_ID" id="9EF384A3-9AA4-BF17-7382-59C285C44DF4">
 <createdBy>jp120</createdBy>
 <createdTime>2025-02-28 00:38:45 UTC</createdTime>
 <generatorID>C3E2175B-EA98-8598-7FA8-748B2CEB3533</generatorID>
 <ownerDesignName>Modelo Logico</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -77,6 +63,20 @@
 <colAssociation fkAssociation="6C5757EA-C3C9-40CC-B34D-7591B8CB51FD" referredColumn="28FCC69C-FB25-F24F-20BA-C9835B3C3125"/>
 </associations>
 </Column>
+<Column name="PDD_CRN_ID" id="ED0A0DD0-94AA-FAED-2462-7E03A9F51CB1">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:54:33 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6876B0EB-FE6C-00BE-5E4F-C6865F89B067" referredColumn="AE430221-BC31-2F5F-456B-AA76BCD0AF3C"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="BF6ADED1-05F6-ECC3-D52F-368749C12CA9" name="PK_PDD">
@@ -89,17 +89,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="253070BD-E10E-398B-F584-EA34370BACD4"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="6EC7D43B-E022-AEB5-7C4D-A4EF9257CA1F" name="FK_PDD_CRN">
-<createdBy>jp120</createdBy>
-<createdTime>2025-02-28 00:38:45 UTC</createdTime>
-<generatorID>C9FF62C1-129B-F286-7EE7-1BF3D62CE0AD</generatorID>
-<ownerDesignName>Modelo Logico</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="3F602DB2-CE75-8542-3628-DF8B3E2C529F"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="DFEA95DC-035E-B44A-E1DB-67E4C95E2BAE" name="FK_PDD_CPN">
@@ -122,6 +111,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="697F21BB-6DCF-EC80-193F-7AC12F4365C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5CFAD69A-B1C2-6ECA-72E2-3F3BF5F0209F" name="FK_PDD_CRN">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:54:33 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED0A0DD0-94AA-FAED-2462-7E03A9F51CB1"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E3B6A90A-B513-948F-391F-2D54AABFB46E" containerWithKeyObject="157B572E-1A02-5D75-EDC8-3B0E3689BFA9" localFKIndex="8B6660CE-3AFC-C524-0122-C98D360D1A1E" name="FK_ETQ_PRD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>F81ED5AA-40F4-9C57-B0E6-19A030B31981</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<referredTableLongName>PRODUTOS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CF43FA52-43A8-754D-9871-ECF6E2D79E07</referredTableID>
+<keyObject>15B9BAF2-2E3F-B333-9CE0-9BAB01B0EDF7</keyObject>
+<referredKeyID>15B9BAF2-2E3F-B333-9CE0-9BAB01B0EDF7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>PRD_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

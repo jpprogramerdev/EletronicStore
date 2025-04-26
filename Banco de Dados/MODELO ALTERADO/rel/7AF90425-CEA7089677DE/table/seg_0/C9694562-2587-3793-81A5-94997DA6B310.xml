@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C9694562-2587-3793-81A5-94997DA6B310" name="PRODUTOS_DESATIVADOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>5AE032F2-887E-2FBA-B52E-096A8C5ECEC6</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PDV_ID" id="10B483E4-955B-DDA1-0438-8BAA1BFCF7A6">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>C2925BCA-42E2-69E9-9579-78BE1DFBE911</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PDV_JUSTIFICATIVA" id="BCE9CB1C-A424-CC12-7FE8-2BAEF209B5F8">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>7497F2AE-5190-B2EC-DC50-ED5082CDFC84</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PDV_PRD_ID" id="596A3FFB-3A4B-F116-5AE2-B0B414DB6F5C">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>ECE66403-89E6-0B62-5AED-B8DCFC77B7FE</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9E3F7863-5865-5F93-BDEF-272C2887DF1D" referredColumn="24BFC6B6-A557-21A3-1AA6-586D1FE02297"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9455BE93-03E2-7752-8785-626E71D8F8A4" name="PK_PDV">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>6FA7F3A6-A63F-7C68-CD17-8AFC0E1F8C9D</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="10B483E4-955B-DDA1-0438-8BAA1BFCF7A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="656BCD57-FD2D-833D-ED9E-6883D3E88ABC" name="FK_PDV_PRD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>BEBBAEBA-7A41-DEA4-2A3A-C072D0340A8C</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="596A3FFB-3A4B-F116-5AE2-B0B414DB6F5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

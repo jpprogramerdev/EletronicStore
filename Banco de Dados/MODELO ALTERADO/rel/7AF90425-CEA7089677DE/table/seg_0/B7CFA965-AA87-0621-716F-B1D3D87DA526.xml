@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B7CFA965-AA87-0621-716F-B1D3D87DA526" name="CUPONS_PEDIDOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-07 00:09:17 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<ordsAlias>table_30</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CPPD_PDD_ID" id="7C808B20-7F20-A255-B749-11214DE0D85B">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-07 00:09:37 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3EAEC7C7-273C-6C54-B44E-D4A5053121F4" referredColumn="253070BD-E10E-398B-F584-EA34370BACD4"/>
+</associations>
+</Column>
+<Column name="CPPD_CPN_ID" id="A5580B70-46B0-E7C1-F2E2-C822BE480BDC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-07 00:10:09 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A191A4E3-EB2C-0B4D-51A4-587B7D22A414" referredColumn="E3D953A0-20C7-6C95-8581-563F196F51B0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="869FC45A-EF36-F149-5E58-FBDA069AD036" name="FK_CPPD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-07 00:09:37 UTC</createdTime>
+<generatorID>DE4C679F-4619-7055-0FC4-121A8C8AEE49</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C808B20-7F20-A255-B749-11214DE0D85B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D523F5B5-1DC9-82BC-402D-E90A4DD824A3" name="FK_CPPD_CPN">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-07 00:10:09 UTC</createdTime>
+<generatorID>895BD057-E3FC-8C3A-7483-44B53ADA78AA</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A5580B70-46B0-E7C1-F2E2-C822BE480BDC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,43 @@
+﻿@model ItemPedido
+
+@{
+    ViewData["Title"] = @Model.Produto.Nome;
+
+    <link rel="stylesheet" href="~/css/Produto.css" asp-append-version="true" />
+}
+<form asp-action="AdicionarItemNoCarrinho" asp-controller="Carrinho" method="post">
+    <input type="hidden" asp-for="@Model.Produto.Id" />
+
+    <div class="div-produto">
+        <div class="imagem-produto">
+            <img src="@Model.Produto.URL_Imagem" alt="Alternate Text" />
+        </div>
+        <div class="informacao-produto">
+            <p class="titulo-produto">@Model.Produto.Nome</p>
+            <p class="nome-marca-produto">@Model.Produto.Marca.Nome</p>
+            <p class="valor-produto">R$ @((Model.Produto.Preco * Model.Produto.GrupoPrecificacao.Margem).ToString("F2"))</p>
+            <label>Quantidade:</label>
+            <input type="number" min="1" value="1" class="form-control" id="quantidade-adicionar-carrinho" asp-for="@Model.Quantidade"/>
+        </div>
+        <div class="carrinho-compra">
+            <p class="quantidade-disponivel-produto">@Model.Produto.QuantidadeEstoque disponível</p>
+            <a class="btn btn-primary">Comprar Agora</a>
+            <button type="submit" class="btn btn-secondary" id="btn-adicionar-carrinho">Adicionar carrinho</button>
+        </div>
+
+        <div class="div-descricao">
+            <p class="descricao-produto">@Model.Produto.Descricao</p>
+        </div>
+    </div>
+</form>
+
+<script>
+    const input = document.getElementById('quantidade-adicionar-carrinho');
+
+    input.addEventListener('keydown', function (event) {
+        if (!["ArrowUp", "ArrowDown", "Tab"].includes(event.key)) {
+            event.preventDefault();
+        }
+    });
+</script>
+

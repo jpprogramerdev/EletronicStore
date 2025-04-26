@@ -1,0 +1,204 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CC52650A-D3F4-1519-1DD6-0D33A4719FA7" name="ENDERECOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>BB94EA6B-5751-9F2E-B1BB-9F2A27459245</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="END_ID" id="E3DC2354-19AE-6AED-1767-8BD59A9BE24E">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro do endereço]]></comment>
+<commentInRDBMS><![CDATA[Chave primaria que representa o registro do endereço]]></commentInRDBMS>
+<generatorID>928A4654-8D02-200A-0067-6CA3CD457D01</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_LOGRADOURO" id="447E8741-3079-77B2-718D-4F566F8BD1A7">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o logradouro do endereço]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o logradouro do endereço]]></commentInRDBMS>
+<generatorID>1CF52365-F1EB-36DD-F66C-F4F9E02574AA</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_NUMERO" id="A7D45B7B-D6FE-DAD0-EB5A-71D84292605D">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o numero do endereço]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o numero do endereço]]></commentInRDBMS>
+<generatorID>D9F1D59D-BE9F-1744-AE28-364F6A8D5C87</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_CEP" id="BF21051B-7BEB-B8B5-F730-5690D1F6324F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o CEP do endereço]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o CEP do endereço]]></commentInRDBMS>
+<generatorID>FA551136-141D-8B7A-B48F-95EF10C34612</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_OBSERVACAO" id="F08024B6-92E8-35DE-32A5-8B2EE989AF1F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica uma observação/complemento do endereço (não obrigatório)]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica uma observação/complemento do endereço (não obrigatório)]]></commentInRDBMS>
+<generatorID>AEE06770-EAB9-CD72-29EA-E7E26348C4E7</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_APELIDO" id="13FEEDAC-23FB-10A2-2E1D-2B9B7218D910">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o apelido do endereço]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o apelido do endereço]]></commentInRDBMS>
+<generatorID>F98FDBA5-2852-C9D3-6C37-703F80F44E72</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_BAIRRO" id="F903AD74-6561-B9F8-EDB2-25E1994A1C88">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 22:40:31 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="END_TPR_ID" id="4CB9BA71-CACD-33F2-0A99-0C70D0F4B0CF">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro do Tipo de Residencia]]></comment>
+<generatorID>41ED0E27-F50F-1AF4-984D-4EEF3ED8EF7D</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7CFDCA85-91C0-B237-5869-BDED4D3C3995" referredColumn="31EFE886-C4C4-24BF-278F-2E56A75B7AD8"/>
+</associations>
+</Column>
+<Column name="END_TPL_ID" id="7684F4C0-CBEE-A9A2-7480-FFEB6B8B5A79">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro do tipo de logradouro]]></comment>
+<generatorID>4195A016-2274-0190-554C-6B362797E930</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D5FCEF46-71EB-7835-6604-FA08F08DC6EE" referredColumn="6736C537-C9DF-9F54-909E-15BD98BD3EE5"/>
+</associations>
+</Column>
+<Column name="END_MUC_ID" id="419161A6-7C96-E73B-7F51-55E0EF249765">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro do municipio]]></comment>
+<generatorID>B5784EE7-18B8-FCEA-1E9B-E06B96FC11C5</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5855F6BB-3B5A-132D-B7A7-F8E5DA893391" referredColumn="A7CDF21E-FE21-3694-4115-667E10EC4F2B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B4AF7F74-AF2A-B8B0-8E3A-752C13324F48" name="PK_END">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>623FA5C8-CE62-4171-5AFF-9CAED064A816</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3DC2354-19AE-6AED-1767-8BD59A9BE24E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E204018E-23CF-BB05-8B4F-048D57E7954B" name="FK_END_TPR">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>24AC79DF-F1EA-1612-A296-84B93BE9E6BB</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CB9BA71-CACD-33F2-0A99-0C70D0F4B0CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="45A21A46-AB6F-D781-1260-767DA7C997AC" name="FK_END_TPL">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>F8BB7EBA-3776-16ED-AC4D-862C3AC8B8A3</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7684F4C0-CBEE-A9A2-7480-FFEB6B8B5A79"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AE05CD39-36C5-277E-9075-1D82D4D60886" name="FK_END_MUC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>56F059B8-7C61-677D-8A35-5BBE33628412</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="419161A6-7C96-E73B-7F51-55E0EF249765"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

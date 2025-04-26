@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6876B0EB-FE6C-00BE-5E4F-C6865F89B067" containerWithKeyObject="E8D4B276-9C51-F240-4ABB-5D5911CE4049" localFKIndex="5CFAD69A-B1C2-6ECA-72E2-3F3BF5F0209F" name="FK_PDD_CRN">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:54:33 UTC</createdTime>
+<ownerDesignName>Modelo Logico</ownerDesignName>
+<referredTableLongName>CARRINHO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>69DB4F90-2903-15A7-C83A-A492DA2A4484</referredTableID>
+<keyObject>A6357468-4CF1-F5E5-BB69-BDFBEB44379D</keyObject>
+<referredKeyID>A6357468-4CF1-F5E5-BB69-BDFBEB44379D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CRN_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

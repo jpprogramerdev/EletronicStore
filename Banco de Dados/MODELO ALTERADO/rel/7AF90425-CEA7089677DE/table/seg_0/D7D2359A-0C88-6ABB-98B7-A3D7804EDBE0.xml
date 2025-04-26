@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D7D2359A-0C88-6ABB-98B7-A3D7804EDBE0" name="PAISES">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>AAE6FF9A-81A0-DC20-B9C4-607C4664AEC0</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PAS_ID" id="88898181-187C-DFC8-B048-DDF71059D646">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primaria que identifica o registro do pais]]></comment>
+<commentInRDBMS><![CDATA[Chave primaria que identifica o registro do pais]]></commentInRDBMS>
+<generatorID>0B9A979A-6DA1-8CE0-95CD-65DA04F1C47B</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PAS_NOME" id="C336970D-D8CA-13FD-1AC3-398491F513F2">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Nome do pais]]></comment>
+<commentInRDBMS><![CDATA[Nome do pai]]></commentInRDBMS>
+<generatorID>E07B9B26-E749-158B-99FE-C9645B92B403</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="904C4D90-C7E6-9003-1EB1-E391FD2B1846" name="PK_PAS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>483BACEE-5E34-B1B4-171E-7CFF918AC00E</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88898181-187C-DFC8-B048-DDF71059D646"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

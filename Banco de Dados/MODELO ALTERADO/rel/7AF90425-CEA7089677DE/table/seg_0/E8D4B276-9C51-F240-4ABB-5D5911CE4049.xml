@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E8D4B276-9C51-F240-4ABB-5D5911CE4049" name="PEDIDOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>51BDB43A-22BA-FD28-AAA1-74787C4BD5DB</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PDD_ID" id="253070BD-E10E-398B-F584-EA34370BACD4">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>A25A06E8-9946-3A94-E52A-48CDA1B31DF5</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PDD_DATA" id="CB983BAC-0839-A84F-E1BD-0CCE0BF6269F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>D1AB2BCB-3E6C-D9C1-56EA-0B8C544E5B93</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PDD_STP_ID" id="697F21BB-6DCF-EC80-193F-7AC12F4365C1">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>D9004F3F-F544-E4EE-8540-34E532B663DC</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6C5757EA-C3C9-40CC-B34D-7591B8CB51FD" referredColumn="28FCC69C-FB25-F24F-20BA-C9835B3C3125"/>
+</associations>
+</Column>
+<Column name="PDD_USU_ID" id="05669307-99CC-0262-B2F1-E164793A380C">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:44:58 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7321C128-CC21-B80B-BAC5-3F0751545146" referredColumn="568E502D-529E-908A-0B66-6360CCDF498B"/>
+</associations>
+</Column>
+<Column name="PDD_END_ID" id="2E8FBC72-03A3-C8F9-AB23-45A98706A1A6">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-05 20:21:31 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F5C807E2-DEF6-E6CA-6C45-32798027F119" referredColumn="E3DC2354-19AE-6AED-1767-8BD59A9BE24E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BF6ADED1-05F6-ECC3-D52F-368749C12CA9" name="PK_PDD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>DE4C679F-4619-7055-0FC4-121A8C8AEE49</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="253070BD-E10E-398B-F584-EA34370BACD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DAEA1B38-8054-5AE0-DFF4-BFE1D32AD8E1" name="FK_PDD_STP">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>4A4FD88C-5138-731A-53C0-B20284BDE53A</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="697F21BB-6DCF-EC80-193F-7AC12F4365C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E56A6B32-7AC3-9E04-1E67-7C99BAD7BE58" name="FK_ PDD_USU">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:44:58 UTC</createdTime>
+<generatorID>39D6B494-FCB6-5820-117A-A33FB0E30B7C</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05669307-99CC-0262-B2F1-E164793A380C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="993C7684-6F8A-836A-AE14-7BB72DAF6749" name="FK_PDD_END">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-05 20:21:31 UTC</createdTime>
+<generatorID>623FA5C8-CE62-4171-5AFF-9CAED064A816</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E8FBC72-03A3-C8F9-AB23-45A98706A1A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

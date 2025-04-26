@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="USUARIOS_ENDERECOS" directorySegmentName="seg_0" id="F82F8B0D-1C90-1FD9-C1D8-146F28F30F2E">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:55:02 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>BB94EA6B-5751-9F2E-B1BB-9F2A27459245</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>134BC957-8F1C-2E4B-C583-99EE024A9858</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

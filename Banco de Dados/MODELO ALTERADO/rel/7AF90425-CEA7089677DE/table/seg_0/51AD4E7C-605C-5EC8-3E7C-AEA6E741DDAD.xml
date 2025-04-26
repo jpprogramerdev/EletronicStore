@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="51AD4E7C-605C-5EC8-3E7C-AEA6E741DDAD" name="FORNECEDORES">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-21 23:16:54 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<ordsAlias>table_28</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FRD_ID" id="18B5DA55-B7B6-6F27-AAD9-2BB6AE6E879F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-21 23:20:52 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FRD_NOME" id="B06A88C6-FD01-C782-7BD0-BEC08EFDF85E">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-21 23:20:52 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="14746198-F8F9-D5CD-8605-BD990B553C4A" name="PK_FRD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-03-21 23:20:52 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="18B5DA55-B7B6-6F27-AAD9-2BB6AE6E879F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

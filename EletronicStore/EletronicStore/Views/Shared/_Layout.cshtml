@@ -26,6 +26,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Cliente" asp-action="ExibirClientes" id="link-exibir-todos-clientes">Exibir Clientes</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Produto" asp-action="CadastrarNovoProduto" id="link-cadastrar-novo-produto">Cadastrar Produto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Produto" asp-action="ExibirTodosProdutos" id="link-exibir-todos-produto">Exibir Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Carrinho" asp-action="ExibirCarrinho" id="link-carrinho">Carrinho</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Pedido" asp-action="ExibirTodosPedidos" id="link-pedidos">Todos Pedidos</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -38,9 +50,6 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - EletronicStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

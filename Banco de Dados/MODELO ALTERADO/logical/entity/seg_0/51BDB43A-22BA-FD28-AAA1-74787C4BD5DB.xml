@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="51BDB43A-22BA-FD28-AAA1-74787C4BD5DB" name="PEDIDOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:04:49 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PDD_ID" id="A25A06E8-9946-3A94-E52A-48CDA1B31DF5">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:06:54 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PDD_DATA" id="D1AB2BCB-3E6C-D9C1-56EA-0B8C544E5B93">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:28:16 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PDD_CRN_ID" id="F61A6FDC-1AA0-C6DA-D6EB-1D080010F681">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:13:08 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PDD_CRT_ID" id="2333D619-29E8-9863-7A83-21903F97A620">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:14:10 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PDD_CPN_ID" id="1AF22ECF-CC87-2B08-48B4-69ECD8E780FC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:14:34 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PDD_STP_ID" id="BAFB3935-31CB-22FF-145B-689B27FCDA39">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:17:32 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CRN_ID" id="32C0CE53-D961-2DB6-9F56-64BA078C7F4C">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:15:34 UTC</createdTime>
+<generatorID>C9FF62C1-129B-F286-7EE7-1BF3D62CE0AD</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>837B0B09-2948-89C4-928F-12D70B86E346</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CPN_ID" id="C3E2175B-EA98-8598-7FA8-748B2CEB3533">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:16:42 UTC</createdTime>
+<generatorID>09CAA6EA-CC27-9785-B2EE-47823EDFAA6B</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>52167754-1F36-8BE0-3FAA-666947A70B19</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STP_ID" id="D9004F3F-F544-E4EE-8540-34E532B663DC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:21:47 UTC</createdTime>
+<generatorID>4A4FD88C-5138-731A-53C0-B20284BDE53A</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>4538D9BA-5FC0-C8AF-E419-C76EAFF2E7D8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DE4C679F-4619-7055-0FC4-121A8C8AEE49" name="CARRINHO PK">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:04:49 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A25A06E8-9946-3A94-E52A-48CDA1B31DF5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

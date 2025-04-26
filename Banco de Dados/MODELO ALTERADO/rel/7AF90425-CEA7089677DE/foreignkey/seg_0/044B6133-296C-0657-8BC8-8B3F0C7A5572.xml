@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="044B6133-296C-0657-8BC8-8B3F0C7A5572" containerWithKeyObject="8427B901-EDDB-1FC8-A83F-65A5F4E0FFAF" localFKIndex="F4328E64-5B1C-F44C-AC35-3B3D4887EC7F" name="FK_CRT_BDC">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>51A2C656-9D4A-61EA-46C8-94A2BAC76717</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<referredTableLongName>BANDEIRAS_CARTAO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A5BCF077-5EB5-B1CD-2E88-28922018BE28</referredTableID>
+<keyObject>EA7BA38E-B563-C56B-2A02-54BD2BBA8111</keyObject>
+<referredKeyID>EA7BA38E-B563-C56B-2A02-54BD2BBA8111</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>BDC_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

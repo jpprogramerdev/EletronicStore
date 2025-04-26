@@ -1,0 +1,224 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BB94EA6B-5751-9F2E-B1BB-9F2A27459245" name="ENDERECOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:34:12 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="END ID" id="928A4654-8D02-200A-0067-6CA3CD457D01">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:34:45 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro do endereço]]></comment>
+<commentInRDBMS><![CDATA[Chave primaria que representa o registro do endereço]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END LOGRADOURO" id="1CF52365-F1EB-36DD-F66C-F4F9E02574AA">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:35:27 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o logradouro do endereço]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o logradouro do endereço]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END NUMERO" id="D9F1D59D-BE9F-1744-AE28-364F6A8D5C87">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:36:12 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o numero do endereço]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o numero do endereço]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END CEP" id="FA551136-141D-8B7A-B48F-95EF10C34612">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:36:52 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o CEP do endereço]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o CEP do endereço]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>8</dataTypeSize>
+<ownDataTypeParameters>8,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END OBSERVACAO" id="AEE06770-EAB9-CD72-29EA-E7E26348C4E7">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:38:03 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica uma observação/complemento do endereço (não obrigatório)]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica uma observação/complemento do endereço (não obrigatório)]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END APELIDO" id="F98FDBA5-2852-C9D3-6C37-703F80F44E72">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:38:47 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o apelido do endereço]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o apelido do endereço]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END_BAIRRO" id="0DC5E264-DAD2-DB81-3E32-012C52E520A3">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 22:41:08 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END_TPR_ID" id="6C32A293-7815-8A90-C55C-112EACD6C4F6">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:39:25 UTC</createdTime>
+<comment><![CDATA[Chave que faz referença ao tipo de residencia  do endereço]]></comment>
+<commentInRDBMS><![CDATA[Chave que faz referença ao tipo de residencia  do endereço]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END_TPL_ID" id="03F1ED6A-6490-8E3A-9368-16EC016AD993">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:40:11 UTC</createdTime>
+<comment><![CDATA[Chave que faz referença ao tipo de logradouro  do endereço]]></comment>
+<commentInRDBMS><![CDATA[Chave que faz referença ao tipo de logradouro  do endereço]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TPR ID" id="41ED0E27-F50F-1AF4-984D-4EEF3ED8EF7D">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:41:05 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro do Tipo de Residencia]]></comment>
+<generatorID>24AC79DF-F1EA-1612-A296-84B93BE9E6BB</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>B644BDBE-D93E-F148-8A08-4A56BBF83FE8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TPL ID" id="4195A016-2274-0190-554C-6B362797E930">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:41:15 UTC</createdTime>
+<comment><![CDATA[Chave primaria que representa o registro do tipo de logradouro]]></comment>
+<generatorID>F8BB7EBA-3776-16ED-AC4D-862C3AC8B8A3</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>07DB8D4D-E549-11CD-4B3C-D5CA7215FA49</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MUC ID" id="B5784EE7-18B8-FCEA-1E9B-E06B96FC11C5">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:35:46 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro do municipio]]></comment>
+<generatorID>56F059B8-7C61-677D-8A35-5BBE33628412</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>F555F170-2DAE-90AF-067D-9FEF8E06E7D0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="END BAIRRO" id="7224C6BE-5699-9B1D-055F-55035DDEC3D2">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:20:10 UTC</createdTime>
+<generatorID>F903AD74-6561-B9F8-EDB2-25E1994A1C88</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="623FA5C8-CE62-4171-5AFF-9CAED064A816" name="PK_END">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 12:34:57 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>928A4654-8D02-200A-0067-6CA3CD457D01</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

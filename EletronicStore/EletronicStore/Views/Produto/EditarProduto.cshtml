@@ -1,0 +1,91 @@
+﻿@model Produto
+
+@{
+    ViewData["Title"] = "Editar Produto ";
+
+    if (TempData["SucessoAtualizarProduto"] != null) {
+        <div class="alert alert-success" role="alert">
+            @TempData["SucessoAtualizarProduto"]
+        </div>
+    } else if (TempData["FalhaAtualizarProrduto"] != null) {
+        <div class="alert alert-danger" role="alert">
+            @TempData["FalhaAtualizarProrduto"]
+        </div>
+    }
+}
+
+
+<form asp-action="AtualizarProduto" asp-controller="Produto" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="@Model.Id"/>
+    <input type="hidden" asp-for="@Model.URL_Imagem" />
+
+    <div class="form-group">
+        <label for="nome-produto">Nome Produto:</label>
+        <input type="text" class="form-control" id="nome-produto" placeholder="Nome produto" asp-for="@Model.Nome">
+    </div>
+    <div class="form-group">
+        <label for="marca-produto">Marca:</label>
+        <input type="text" class="form-control" id="marca-produto" placeholder="Marca" asp-for="@Model.Marca.Nome">
+    </div>
+    <div class="form-group">
+        <label for="valor-bruto-produto">Valor Bruto:</label>
+        <input type="number" class="form-control" id="valor-bruto-produto" asp-for="@Model.Preco">
+    </div>
+    <div class="form-group">
+        <label for="descricao-produto">Descrição:</label>
+        <textarea class="form-control" id="descricao-produto" asp-for="@Model.Descricao"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="grupo-precificacao-produto">Grupo Precificacao :</label>
+        <select class="form-control" id="grupo-precificacao-produto" asp-for="@Model.GrupoPrecificacao.Id">
+            @{
+                IFacadeGeneric facadeGrupoPrecificacao = new FacadeGrupoPrecificacao();
+
+                foreach (GrupoPrecificacao grupoPrecificacao in facadeGrupoPrecificacao.Selecionar()) {
+
+                    if(Model.GrupoPrecificacao.Id == grupoPrecificacao.Id){
+                        <option value="@grupoPrecificacao.Id" selected>@grupoPrecificacao.GrupoPrecificacaao</option>
+                    }
+
+                    <option value="@grupoPrecificacao.Id">@grupoPrecificacao.GrupoPrecificacaao</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="tipo-produto">Tipo Produto:</label>
+        <select class="form-control" id="tipo-produto" asp-for="@Model.TipoProduto.Id">
+            @{
+                IFacadeGeneric facadeTipoProduto = new FacadeTipoProduto();
+
+                foreach (TipoProduto tipoProduto in facadeTipoProduto.Selecionar()) {
+
+                    if (Model.TipoProduto.Id == tipoProduto.Id){
+                        <option value="@tipoProduto.Id" selected>@tipoProduto.Tipo</option>
+                    }
+
+                    <option value="@tipoProduto.Id">@tipoProduto.Tipo</option>
+                }
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="valor-bruto-produto">Imagem:</label>
+        <input type="file" class="form-control" id="img-produto" asp-for="@Model.Imagem">
+    </div>
+
+    <div class="form-group">
+        <label for="fornecedor-produto">Fornecedor:</label>
+        <input type="text" class="form-control" id="fornecedor-produto" placeholder="Fornecedor" asp-for="@Model.Fornecedor.Nome">
+    </div>
+
+    <div class="form-group">
+        <label for="quantidade-estoque-produto">Quantidade:</label>
+        <input type="number" class="form-control" id="quantidade-estoque-produto" asp-for="@Model.QuantidadeEstoque">
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="submit-edicao-produto">Salvar</button>
+
+</form>

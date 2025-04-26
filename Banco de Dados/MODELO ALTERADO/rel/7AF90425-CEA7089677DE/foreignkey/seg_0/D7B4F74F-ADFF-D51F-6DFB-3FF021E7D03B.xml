@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D7B4F74F-ADFF-D51F-6DFB-3FF021E7D03B" containerWithKeyObject="1F4BBA20-E5A2-9838-DB32-EA2E9AD6E79E" localFKIndex="DC378895-C4EC-E1A5-C795-55404DA502D7" name="FK_USU_TLF">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-28 00:38:45 UTC</createdTime>
+<generatorID>8B8FC8E8-7CC4-CF44-05FD-6F580F41C0BA</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<referredTableLongName>TELEFONES</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2EA2413D-2272-5F41-88EC-778EB688055B</referredTableID>
+<keyObject>363761D4-B3AE-5F37-AE2C-F0DF29420568</keyObject>
+<referredKeyID>363761D4-B3AE-5F37-AE2C-F0DF29420568</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>TLF_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

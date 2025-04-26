@@ -1,0 +1,45 @@
+﻿@model SolicitacaoTroca
+
+@{
+    ViewData["Title"] = "Exibir Pedido";
+
+    <link rel="stylesheet" href="~/css/InformacaoPedido.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/DadosCliente.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Carrinho.css" asp-append-version="true" />
+}
+
+
+
+<div class="info-cliente-endereco-pedido">
+    <p class="numero-pedido">Solicitação Troca = Pedido #@Model.PedidoId</p>
+
+    <div class="info-cliente-pedido">
+        <p class="card-title">Cliente</p>
+        <p class="dados-cliente">Nome: @Model.Usuario.Nome</p>
+        <p class="dados-cliente">Email: @Model.Usuario.Email</p>
+    </div>
+
+    <div class="info-pedido">
+        <p class="card-title">Produtos solicitados</p>
+
+        @foreach (ProdutoTroca Produto in Model.Produtos) {
+            <div class="item-produto">
+                <div class="card-produto">
+                    <div class="miniatura-img-produto">
+                        <img src="@Produto.Produto.URL_Imagem" alt="Produto" />
+                    </div>
+                    <div class="informacao-produto">
+                        <p class="nome-produto">@Produto.Produto.Nome - @Produto.Produto.Marca.Nome</p>
+                        <p class="quantidade-produto">Qtde solicitada troca: @Produto.QuantidadeTroca</p>
+                        <p class="quantidade-produto">Justificativa: @Produto.Motivo</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <a asp-controller="Pedido" asp-action="AlterarStatusPedido" class="link-success" style="text-decoration:none" asp-route-pedidoId="@Model.PedidoId" asp-route-status="TROCA ACEITA">APROVAR TROCA</a>
+    <a asp-controller="Pedido" asp-action="AlterarStatusPedido" class="link-danger" style="text-decoration:none" asp-route-pedidoId="@Model.PedidoId" asp-route-status="TROCA RECUSADA">REPROVAR TROCA</a>
+
+</div>
+

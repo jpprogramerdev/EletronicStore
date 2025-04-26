@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="816048E7-ADCC-8A83-48A1-C74AB6AC3E62" name="TIPOS_TELEFONE">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>0807BA1A-4C0F-2A69-9D7D-A4B6AC14C694</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="TPT_ID" id="60BC968E-5B31-AB58-C9FE-74BBAC920DEE">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Chave primária para representar o registro do tipo de telefone]]></comment>
+<commentInRDBMS><![CDATA[Chave primária para representar o registro do tipo de telefone]]></commentInRDBMS>
+<generatorID>A859A935-D7C3-3CF7-B9AE-9DAB334C7E02</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TPT_TIPO" id="F8CC2020-8D3D-3625-F8D3-4487717598C7">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o tipo de telefone]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o tipo de telefone]]></commentInRDBMS>
+<generatorID>27D5B152-8DEC-0CA2-23E8-6FBD4872ABEC</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="00200492-2D23-7A66-D8A3-420FD6B4EC11" name="PK_TPT">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="60BC968E-5B31-AB58-C9FE-74BBAC920DEE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

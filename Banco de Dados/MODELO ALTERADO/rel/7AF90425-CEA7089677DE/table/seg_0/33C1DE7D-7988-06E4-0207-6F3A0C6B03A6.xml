@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="33C1DE7D-7988-06E4-0207-6F3A0C6B03A6" name="USUARIOS_CARTOES">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<ordsAlias>relation_14</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="USCT_CRT_ID" id="2A96D113-27A1-AEE9-B231-054597474FBD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CB2201C2-74C4-A007-7858-E6E9CCF6216F" referredColumn="6620B1AE-5C65-A8C4-74B6-FC26E3DC0A2F"/>
+</associations>
+</Column>
+<Column name="USCT_USU_ID" id="9F52C456-D340-FAE3-B8F7-7E8A3228645B">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="82D1CB51-86CC-6118-8291-715C15E4A4DB" referredColumn="568E502D-529E-908A-0B66-6360CCDF498B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F2A9A792-7F9B-BB60-C0AF-D87E7A1A2D7E" name="PK_USUARIOS_CARTOES">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2A96D113-27A1-AEE9-B231-054597474FBD"/>
+<colUsage columnID="9F52C456-D340-FAE3-B8F7-7E8A3228645B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="376CEA1F-766B-4B7F-3F41-8D220A2A7A8D" name="FK_USU_CRT">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>DEBE58EB-4FBD-0A9C-6CAA-D81DE75671BA</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F52C456-D340-FAE3-B8F7-7E8A3228645B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="934BAACA-37F1-A424-A043-58DA180F1BC8" name="FK_CRT_USU">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:56:28 UTC</createdTime>
+<generatorID>DEBE58EB-4FBD-0A9C-6CAA-D81DE75671BA</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2A96D113-27A1-AEE9-B231-054597474FBD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

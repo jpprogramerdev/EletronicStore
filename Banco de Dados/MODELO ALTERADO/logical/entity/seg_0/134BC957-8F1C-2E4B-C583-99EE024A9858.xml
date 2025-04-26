@@ -1,0 +1,218 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="134BC957-8F1C-2E4B-C583-99EE024A9858" name="USUARIOS">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:36:40 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="USU ID" id="02C62A05-A5A3-32CF-9A59-69B1E174BF06">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:38:37 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro do cliente]]></comment>
+<commentInRDBMS><![CDATA[Chave primária que representa o registro do usuario]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU NOME" id="D6EA6334-4FEB-6D77-3BA5-C1BF0F23A5A8">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:39:05 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o nome do usuario]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o nome do usuario]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU EMAIL" id="ADC2D675-A41D-50CD-017E-0EF8E3907D7F">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:44:58 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o email do usuario]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o email do usuario]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU SENHA" id="ACAE461D-4110-7E1E-07A3-663C2F94FAB6">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:45:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[Coluna que identifica o senha  do usuario(deverá ser criptografada)]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU CPF" id="06F31909-4B8D-398B-0EF9-A9D1A9EE2343">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:49:05 UTC</createdTime>
+<comment><![CDATA[Coluna que identifica o CPF  do usuario]]></comment>
+<commentInRDBMS><![CDATA[Coluna que identifica o CPF  do usuario]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>14</dataTypeSize>
+<ownDataTypeParameters>14,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU DATA NASCIMENTO" id="896F9FA0-F0B3-E918-3287-1C1303C80625">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:45:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[Coluna que identifica o data de nascimento do usuario]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU_TLF_ID" id="840EFD56-7D27-5CC8-213C-1E60B7C187F9">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:46:42 UTC</createdTime>
+<comment><![CDATA[Chave estrangeira que faz referencia aos telefones]]></comment>
+<commentInRDBMS><![CDATA[Chave estrangeira que faz referencia aos telefones]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU_TPU_ID" id="12D12F1F-EDC6-52E3-40D3-CD8B49748263">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:48:18 UTC</createdTime>
+<comment><![CDATA[Chave estrangeira que faz referencia aos tipos de usuario]]></comment>
+<commentInRDBMS><![CDATA[Chave estrangeira que faz referencia aos tipos de usuario]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU_GNR_ID" id="68CC5891-98DA-9732-F9F0-46EC509CA54A">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:50:15 UTC</createdTime>
+<comment><![CDATA[Chave estrangeira que faz referencia aos generos]]></comment>
+<commentInRDBMS><![CDATA[Chave estrangeira que faz referencia aos generos]]></commentInRDBMS>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU GNR ID" id="76902B4A-B197-C9BD-126A-1662B16A5812">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:52:53 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro dos generos dos usuarios]]></comment>
+<generatorID>89BDE5EE-C197-DB3F-51E4-EFD31BFC7176</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>C260F48C-6D81-5205-4F68-3247329CED15</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="USU TPU ID" id="A12B43A6-4F0E-8582-A88E-4DF2D7361FA0">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:55:12 UTC</createdTime>
+<comment><![CDATA[Chave primária que representa o registro dos tipos  dos usuarios]]></comment>
+<generatorID>923D54F8-53DE-BBEA-CAE1-48FDAC429965</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>0C9DFC88-2F24-CF9E-E1A5-D35B60B744B7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TLF ID" id="E367375F-C13E-1DEF-9921-6538D1F3A520">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:23:34 UTC</createdTime>
+<comment><![CDATA[Chave primária que rerpesenta o registro dos telefones]]></comment>
+<generatorID>8B8FC8E8-7CC4-CF44-05FD-6F580F41C0BA</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<referedAttribute>B9392D2E-227A-AEAE-4782-FB7A43DB0DCD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="39D6B494-FCB6-5820-117A-A33FB0E30B7C" name="PK_USU">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-22 19:38:48 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>02C62A05-A5A3-32CF-9A59-69B1E174BF06</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="BD118B72-6A75-5CC3-190E-C6C341BB60BA" name="USUARIOS  UN">
+<createdBy>jp120</createdBy>
+<createdTime>2025-02-27 23:20:10 UTC</createdTime>
+<generatorID>013F24C0-BE57-DD23-F00F-6BCE049D0C45</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<engineerTo>
+<item key="7AF90425-D006-6CD0-9A06-CEA7089677DE" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>06F31909-4B8D-398B-0EF9-A9D1A9EE2343</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

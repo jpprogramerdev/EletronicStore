@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F7AA5B37-734E-EF8C-7446-AD1611411C85" name="ITENS_PEDIDO">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:41:31 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<ordsAlias>table_29</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IPD_QUANTIDADE" id="1E19FC68-8680-8452-7901-A3F89090072D">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:41:56 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IPD_PRD_ID" id="8E07234D-D4C2-FBA9-3A3C-4902D5A52B72">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:43:02 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="44D93BD9-67D7-C6A0-7780-1851C8EA7A53" referredColumn="24BFC6B6-A557-21A3-1AA6-586D1FE02297"/>
+</associations>
+</Column>
+<Column name="IPD_PDD_ID" id="7B54F839-BA43-256B-9945-16B4057340A1">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:46:24 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ED1E1B30-F774-811A-4729-4315B16163EF" referredColumn="253070BD-E10E-398B-F584-EA34370BACD4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E8F73122-30A2-A689-0065-ECBAC4CF325E" name="PK_IPD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:53:25 UTC</createdTime>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1E19FC68-8680-8452-7901-A3F89090072D"/>
+<colUsage columnID="8E07234D-D4C2-FBA9-3A3C-4902D5A52B72"/>
+<colUsage columnID="7B54F839-BA43-256B-9945-16B4057340A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FBAE0BEE-96AE-30D9-58ED-EC7071B23DBA" name="FK_IPD_PRD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:43:02 UTC</createdTime>
+<generatorID>C42230D2-E0F2-8514-3B89-B1E8D8716A43</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E07234D-D4C2-FBA9-3A3C-4902D5A52B72"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BBDE11F1-0FAE-996F-44F3-1A3EC49ACAAC" name="FK_IPD_PDD">
+<createdBy>jp120</createdBy>
+<createdTime>2025-04-02 22:46:24 UTC</createdTime>
+<generatorID>DE4C679F-4619-7055-0FC4-121A8C8AEE49</generatorID>
+<ownerDesignName>MODELO ALTERADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B54F839-BA43-256B-9945-16B4057340A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
